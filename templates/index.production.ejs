@@ -1,0 +1,24 @@
+
+<% if (htmlWebpackPlugin.options.baseHref) { %>
+<base href="<%= htmlWebpackPlugin.options.baseHref %>" />
+<% } %>
+<% for (var css in htmlWebpackPlugin.files.css) { %>
+<link href="<%= htmlWebpackPlugin.options.addBaseHrefToScripts + htmlWebpackPlugin.files.css[css].replace(/^.*(\\|\/|\:)/, '') %>" rel="stylesheet">
+<% } %>
+
+<!--<div data-nav-bar title="myACC"></div>-->
+<div class="container">
+    <ui-view></ui-view>
+</div>
+
+<% if (htmlWebpackPlugin.options.window) { %>
+<script>
+    <% for (var varName in htmlWebpackPlugin.options.window) { %>
+    window['<%=varName%>'] = <%= JSON.stringify(htmlWebpackPlugin.options.window[varName]) %>;
+    <% } %>
+</script>
+<% } %>
+
+<% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+<script src="<%= htmlWebpackPlugin.options.addBaseHrefToScripts + htmlWebpackPlugin.files.chunks[chunk].entry.replace(/^.*(\\|\/|\:)/, '') %>"></script>
+<% } %>
