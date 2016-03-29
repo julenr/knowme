@@ -12,6 +12,7 @@
 //
 
 import React from 'react';
+import { connect } from 'react-redux';
 
 function mapStateToProps(state, ownProps) {
   return {
@@ -32,6 +33,6 @@ class Home extends React.Component {
 
 export default connect(
   mapStateToProps, {
-      ...actionCreators
+
     }
 )(Home);

@@ -23,10 +23,11 @@ import './styles/screen.scss';
 // REACT Dependencies
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Router, Route, Link, IndexRoute, hashHistory } from 'react-router';
 
 // REDUX STORE
 import store from './redux/create-store';
-import * as actionCreators from './redux/general-actions';
+import { Provider } from 'react-redux';
 
 //CUSTOM COMPONENTS
 import App from './components/App/App.jsx';
@@ -38,18 +39,17 @@ const app = document.createElement('div');
 
 document.body.appendChild(app);
 
-if(state._footerData.loaded){
-  ReactDOM.render((
-    <Provider store={ store }>
-      <Router>
-        <Route path="/" component={App}>
-          <IndexRoute component={Home}/>
-          <Route path="about" component={About} />
-        </Route>
-      </Router>
-    </Provider>
-  ), app);
-}
+ReactDOM.render((
+  <Provider store={ store }>
+    <Router history={hashHistory}>
+      <Route path="/" component={App}>
+        <IndexRoute component={Home}/>
+        <Route path="about" component={About} />
+      </Route>
+    </Router>
+  </Provider>
+), app);
+
 
 
 

@@ -12,6 +12,10 @@
 //
 
 import React from 'react';
+import { connect } from 'react-redux';
+
+//import * as actionCreators from '../../redux/general-actions';
+
 
 function mapStateToProps(state, ownProps) {
   return {
@@ -21,7 +25,6 @@ function mapStateToProps(state, ownProps) {
 
 class Home extends React.Component {
   render () {
-
     return (
       <div>
         MAIN PAGE
@@ -32,6 +35,6 @@ class Home extends React.Component {
 
 export default connect(
   mapStateToProps, {
-      ...actionCreators
+
     }
 )(Home);
