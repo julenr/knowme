@@ -25,13 +25,12 @@ module.exports = function karmaConfig (config) {
       'coverage'
     ],
     files: [
-      'angular/index.js',
-      'node_modules/angular-mocks/angular-mocks.js',
-      'angular/**/*.test.js'
+      'src/index.js',
+      'src/**/*.test.js'
     ],
     preprocessors: {
-      'angular/index.js': ['webpack', 'sourcemap'],
-      'angular/**/*.test.js': ['webpack', 'sourcemap']
+      'src/index.js': ['webpack', 'sourcemap'],
+      'src/**/*.test.js': ['webpack', 'sourcemap']
     },
     colors: true,
     browsers: [

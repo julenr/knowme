@@ -24,20 +24,19 @@ const pkg = require('./package.json');
 
 const TARGET = process.env.npm_lifecycle_event;
 const PATHS = {
-  app: path.join(__dirname, 'angular'),
+  app: path.join(__dirname, 'src'),
   build: path.join(__dirname, 'build'),
-  'build-portal': path.join(__dirname, 'build'),
   develop: path.join(__dirname, 'build-develop'),
-  test: path.join(__dirname, 'angular')
+  test: path.join(__dirname, 'src')
 };
-const APP_TITLE = 'myACC';
+const APP_TITLE = 'RojoJ';
 
 process.env.BABEL_ENV = TARGET;
 
 const common = {
   entry: PATHS.app,
   resolve: {
-    extensions: ['', '.js']
+    extensions: ['', '.js', '.jsx']
   },
   output: {
     path: PATHS.build,
@@ -46,8 +45,18 @@ const common = {
   module: {
     loaders: [
       {
-        test: /\.js$/,
-        loaders: ['ng-annotate', 'babel?cacheDirectory'],
+        test: /\.jsx?$/,
+        loaders: ['react-hot', 'babel'],
+        include: PATHS.app
+      },
+      {
+        test: /\.scss$/,
+        loaders: ['style', 'css', 'sass'],
+        include: PATHS.app
+      },
+      {
+        test: /\.css$/,
+        loaders: ['style', 'css'],
         include: PATHS.app
       },
       {
@@ -63,7 +72,7 @@ const common = {
     ],
     preLoaders: [
       {
-        test: /\.js?$/,
+        test: /\.jsx?$/,
         loaders: ['eslint'],
         include: PATHS.app
       }
@@ -76,6 +85,7 @@ if(TARGET === 'start' || !TARGET) {
     devtool: '#eval-source-map',
     devServer: {
       historyApiFallback: true,
+      hot: true,
       inline: true,
       progress: true,
       watchOptions: {
@@ -87,8 +97,8 @@ if(TARGET === 'start' || !TARGET) {
 
       // parse host and port from env so this is easy
       // to customize
-      host: '10.100.65.48',
-      port: 8085
+      host: process.env.HOST,
+      port: process.env.PORT
     },
     module: {
       loaders: [
@@ -106,14 +116,7 @@ if(TARGET === 'start' || !TARGET) {
       }),
       new HtmlwebpackPlugin({
         template: './templates/index.webpack.ejs',
-        title: APP_TITLE,
-        unsupportedBrowser: true,
-        mobile: true,
-        window: {
-          env: {
-            apiHost: ''
-          }
-        }
+        title: APP_TITLE
       }),
       new webpack.DefinePlugin({
         '__DEV__': JSON.stringify(JSON.parse('true'))
@@ -122,9 +125,9 @@ if(TARGET === 'start' || !TARGET) {
   });
 }
 
-if(TARGET === 'build' || TARGET === 'build-portal') {
+if(TARGET === 'build') {
   module.exports = merge(common, {
-    // Define entry points needed for splitting
+    devtool: '#source-map',
     entry: {
       app: PATHS.app,
       vendor: Object.keys(pkg.dependencies)
@@ -136,7 +139,11 @@ if(TARGET === 'build' || TARGET === 'build-portal') {
     },
     module: {
       loaders: [
-        { test: /\.css$/, loader: ExtractTextPlugin.extract('style', 'css')}
+        {
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract('style', 'css!sass'),
+        include: PATHS.app
+        }
       ]
     },
     plugins: [
@@ -165,23 +172,13 @@ if(TARGET === 'build' || TARGET === 'build-portal') {
       new HtmlwebpackPlugin({
         inject: false,
         template: './templates/index.production.ejs',
-        title: APP_TITLE,
-        googleAnalytics: {
-          active: false,
-          trackingId: 'UA-XXXX-XX',
-          pageViewOnLoad: true
-        }
+        title: APP_TITLE
       }),
       new webpack.optimize.UglifyJsPlugin({
         compress: {
           warnings: false
         }
-      }),
-      new CopyWebpackPlugin([
-        { from: PATHS.app + '/assets/fonts', to: './assets/fonts' },
-        { from: PATHS.app + '/assets/images', to: './assets/images' },
-        { from: PATHS.app + '/assets/js', to: './assets/js' }
-      ])
+      })
     ]
   });
 }
