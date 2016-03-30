@@ -18,7 +18,7 @@ if (__DEV__) {
 
 // SASS Stylesheets
 import './styles/screen.scss';
-
+import './styles/ionicons/ionicons.scss';
 
 // REACT Dependencies
 import React from 'react';
@@ -30,7 +30,7 @@ import store from './redux/create-store';
 import { Provider } from 'react-redux';
 
 //CUSTOM COMPONENTS
-import App from './components/App/App.jsx';
+import App from './components/App';
 import Home from './components/Home';
 import About from './components/About';
 
@@ -41,10 +41,10 @@ document.body.appendChild(app);
 
 ReactDOM.render((
   <Provider store={ store }>
-    <Router history={hashHistory}>
-      <Route path="/" component={App}>
-        <IndexRoute component={Home}/>
-        <Route path="about" component={About} />
+    <Router history={ hashHistory }>
+      <Route path="/" component={ App }>
+        <IndexRoute component={ Home }/>
+        <Route path="about" component={ About } />
       </Route>
     </Router>
   </Provider>

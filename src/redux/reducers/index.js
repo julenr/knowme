@@ -3,8 +3,8 @@
  */
 
 import { combineReducers } from 'redux'
-import { _mainPage } from './mainReducer';
+import { _app } from './app.reducer';
 
 export default combineReducers({
-  _mainPage
+  _app
 });

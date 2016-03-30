@@ -1,0 +1,104 @@
+.bg{
+  background:#009688;
+  position:fixed;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  overflow:hidden;
+  z-index:-1;
+}
+.bg:before{
+  content: ' ';
+  position:absolute;
+  height:100%;
+  margin-top:-260px;
+  width:600px;
+  background:#FFF;
+  z-index:2;
+  -webkit-transform:rotate(45deg);
+  -moz-transform:rotate(45deg);
+  -ms-transform:rotate(45deg);
+  -o-transform:rotate(45deg);
+  transform:rotate(45deg);
+}
+
+.menu-btn{
+  position:absolute;
+  height:64px;
+  width:64px;
+  line-height:64px;
+  border-radius:50%;
+  background:#009688;
+  -webkit-box-shadow: 0 3px 15px 0 rgba(0,0,0,.18);
+  -moz-box-shadow: 0 3px 15px 0 rgba(0,0,0,.18);
+  box-shadow: 0 3px 15px 0 rgba(0,0,0,.18);
+  top:50%;
+  margin-top:-32px;
+  left:-32px;
+  display:block;
+  overflow:hidden;
+  text-align:center;
+  z-index:999;
+  -webkit-transition:all .3s ease;
+  -moz-transition:all .3s ease;
+  transition:all .3s ease;
+}
+.menu-btn:hover{
+  -webkit-box-shadow: 0 10px 35px 0 rgba(0,0,0,.18);
+  -moz-box-shadow: 0 10px 35px 0 rgba(0,0,0,.18);
+  box-shadow: 0 10px 35px 0 rgba(0,0,0,.18);
+}
+.menu-btn > .lines{
+  vertical-align:middle;
+  display:inline-block;
+  *display:inline;
+  *zoom:1;
+  height:32px;
+  width:32px;
+  position:relative;
+}
+.menu-btn > .lines > span{
+  position:absolute;
+  left:0;
+  display:block;
+  height:4px;
+  border-radius:2px;
+  width:32px;
+  margin:auto;
+  background:#FFF;
+  -webkit-transition:all .3s ease;
+  -moz-transition:all .3s ease;
+  transition:all .3s ease;
+}
+.menu-btn > .lines > .l1{
+  top:5px;
+}
+.menu-btn > .lines > .l2{
+  top:14px;
+}
+.menu-btn > .lines > .l3{
+  top:23px;
+}
+span.show-menu .menu-btn > .lines > .l2{
+  opacity:0;
+}
+span.show-menu .menu-btn > .lines > .l1,
+span.show-menu .menu-btn > .lines > .l3{
+  top:50%;
+  margin-top:-2px;
+}
+span.show-menu .menu-btn > .lines > .l1{
+  -webkit-transform:rotate(45deg);
+  -moz-transform:rotate(45deg);
+  -ms-transform:rotate(45deg);
+  -o-transform:rotate(45deg);
+  transform:rotate(45deg);
+}
+span.show-menu .menu-btn > .lines > .l3{
+  -webkit-transform:rotate(-45deg);
+  -moz-transform:rotate(-45deg);
+  -ms-transform:rotate(-45deg);
+  -o-transform:rotate(-45deg);
+  transform:rotate(-45deg);
+}

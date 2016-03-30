@@ -1,6 +1,6 @@
 {
-  "name": "App",
+  "name": "Menu",
   "version": "0.1.0",
   "private": true,
-  "main": "./App.jsx"
+  "main": "./Menu.jsx"
 }

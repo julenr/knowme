@@ -50,16 +50,6 @@ const common = {
         include: PATHS.app
       },
       {
-        test: /\.scss$/,
-        loaders: ['style', 'css', 'sass'],
-        include: PATHS.app
-      },
-      {
-        test: /\.css$/,
-        loaders: ['style', 'css'],
-        include: PATHS.app
-      },
-      {
         test: /\.(png|jpg|gif)$/,
         loaders: ['file-loader?name=assets/images/[name].[ext]'],
         include: PATHS.app
@@ -104,7 +94,7 @@ if(TARGET === 'start' || !TARGET) {
       loaders: [
         // Define development specific CSS setup
         { test: /\.css$/, loaders: ['style', 'css']},
-        { test: /\.less$/, loader: 'style!css!less', include: PATHS.app }
+        { test: /\.scss$/, loader: 'style!css!sass', include: PATHS.app }
       ]
     },
     plugins: [
