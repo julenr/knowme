@@ -15,6 +15,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import Menu from '../Menu';
+
 function mapStateToProps(state) {
   return {
 
@@ -24,10 +26,20 @@ function mapStateToProps(state) {
 class App extends React.Component {
   render() {
     return (
-      <div>
-        {this.props.children || 'Welcome to Careers NZ'}
-
-      </div>
+      <span className="show-menu">
+        <div className='bg' ></div>
+        <div className="main-content">
+          <a href="#" className="menu-btn" >
+            <span className="lines" >
+              <span className="l1" ></span>
+              <span className="l2" ></span>
+              <span className="l3" ></span>
+            </span>
+          </a>
+          <Menu />
+          {this.props.children || 'Welcome to Careers NZ'}
+        </div>
+      </span>
     );
   }
 }

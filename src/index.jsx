@@ -18,6 +18,7 @@ if (__DEV__) {
 
 // SASS Stylesheets
 import './styles/screen.scss';
+import './styles/linea.scss';
 
 
 // REACT Dependencies
