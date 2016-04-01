@@ -33,6 +33,9 @@ import { Provider } from 'react-redux';
 import App from './components/App';
 import Home from './components/Home';
 import About from './components/About';
+import Resume from './components/Resume';
+import Portfolio from './components/Portfolio';
+import Contact from './components/Contact';
 
 // Element to attach React-DOM
 const app = document.createElement('div');
@@ -44,7 +47,10 @@ ReactDOM.render((
     <Router history={ hashHistory }>
       <Route path="/" component={ App }>
         <IndexRoute component={ Home }/>
-        <Route path="about" component={ About } />
+        <Route path="/about" component={ About } />
+        <Route path="/resume" component={ Resume } />
+        <Route path="/portfolio" component={ Portfolio } />
+        <Route path="/contact" component={ Contact } />
       </Route>
     </Router>
   </Provider>

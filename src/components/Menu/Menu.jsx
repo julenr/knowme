@@ -13,7 +13,7 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-
+import { Link } from 'react-router';
 
 // SASS Stylesheets
 import './menu.scss';
@@ -31,34 +31,34 @@ class Menu extends React.Component {
         <nav className="menu-items" >
           <ul>
             <li>
-              <a href="#" data-section="home" >
+              <Link to="/" data-section="home" onClick={() => this.props.menuButtonClick()}>
                 <i className="ion-ios-home-outline" ></i>
                 <span>Home</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" data-section="about" >
+              <Link to="/about" data-section="about" onClick={() => this.props.menuButtonClick()}>
                 <i className="ion-ios-person-outline" ></i>
                 <span>About</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" data-section="resume" >
+              <Link to="/resume" data-section="resume" onClick={() => this.props.menuButtonClick()}>
                 <i className="ion-ios-book-outline" ></i>
                 <span>Resume</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" data-section="portfolio" >
+              <Link to="/portfolio" data-section="portfolio" onClick={() => this.props.menuButtonClick()}>
                 <i className="ion-ios-briefcase-outline" ></i>
                 <span>Portfolio</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" data-section="contact" >
+              <Link to="/contact" data-section="contact" onClick={() => this.props.menuButtonClick()}>
                 <i className="ion-ios-email-outline" ></i>
                 <span>Contact Me</span>
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
