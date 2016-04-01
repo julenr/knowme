@@ -12,7 +12,8 @@
     "React",
     "ES2015",
     "Webpack",
-    "Flux"
+    "Flux",
+    "Redux"
   ],
   "author": "Julen Rojo",
   "dependencies": {

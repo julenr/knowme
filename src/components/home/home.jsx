@@ -14,8 +14,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-//import * as actionCreators from '../../redux/general-actions';
-
+// SASS Stylesheets
+import './home.scss';
 
 function mapStateToProps(state, ownProps) {
   return {
@@ -37,7 +37,7 @@ class Home extends React.Component {
             <div className="intro-text-col">
               <div className="inner">
                 <div className="intro-text">
-                  <h1>Im John Doe</h1>
+                  <h1>I'm Julen Rojo</h1>
                   <span>A friend, buddy and dude from earth</span>
                   <p>
                     Euismod consulatu eos eu. Vocent facilis sensibus vel ut, quo an nihil qualisque. Mea eu nulla prompta. Dicat velit at usum, malis euismod vim an

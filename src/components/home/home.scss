@@ -1,0 +1,113 @@
+/*=================================================================================
+	Main Section
+=================================================================================*/
+.main-section{
+  overflow:visible;
+  padding:0;
+}
+.main-section,
+.main-section > .row,
+.main-section > .row > div{
+  height:100%;
+  position:relative;
+}
+.person-img{
+  position:absolute;
+  bottom:0;
+  top:-55px;
+  left:0;
+  right:0;
+  text-align:center;
+  z-index:44;
+}
+.person-img > img{
+  width:auto;
+  height:100%;
+}
+.text-col-main{
+  overflow:auto;
+  height:100%;
+}
+.intro-text-col{
+  position:relative;
+  height:100%;
+  width:100%;
+  display:table;
+  overflow-y:auto;
+}
+.intro-text-col > .inner{
+  height:100%;
+  width:100%;
+  vertical-align:middle;
+  display:table-cell;
+}
+.intro-text{
+  padding:60px 100px;
+  padding-left:0;
+}
+.intro-text > h1{
+  font-weight:bold;
+  font-size:50px;
+  line-height:1.4em;
+  margin:0;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+.intro-text > span{
+  font-size:16px;
+  color:#009688;
+  font-weight:300;
+}
+.intro-text > p{
+  font-size:16px;
+  color:#727272;
+  color:rgba(0,0,0,.45);
+  margin:0;
+  font-weight:500;
+  margin-top:35px;
+  line-height:1.7em;
+}
+.intro-text > .intro-btns{
+  margin-top:35px;
+}
+.intro-text > .intro-btns > .btn-material{
+  margin-right:15px;
+}
+a.btn-material{
+  color:#FFF;
+}
+.btn-material{
+  position:relative;
+  padding:11px 27px;
+  border:solid 2px #009688;
+  background:#009688;
+  text-align:center;
+  display:inline-block;
+  *display:inline;
+  *zoom:1;
+  text-decoration:none !important;
+  color:#FFF;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-weight:600;
+  -webkit-transition:all .3s ease;
+  -moz-transition:all .3s ease;
+  transition:all .3s ease;
+}
+.btn-material:hover{
+  -webkit-box-shadow: 0 10px 35px 0 rgba(0,0,0,.14);
+  -moz-box-shadow: 0 10px 35px 0 rgba(0,0,0,.14);
+  box-shadow: 0 10px 35px 0 rgba(0,0,0,.14);
+}
+.btn-material.btn-secondary{
+  background:#FFF;
+  color:#727272;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-color:transparent;
+}
+.btn-material.btn-secondary:hover{
+  border-color:#009688;
+  color:#009688;
+}
