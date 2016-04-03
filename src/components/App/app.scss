@@ -102,3 +102,26 @@ span.show-menu .menu-btn > .lines > .l3{
   -o-transform:rotate(-45deg);
   transform:rotate(-45deg);
 }
+
+
+@media(max-width:600px) {
+  .menu-btn {
+    right: 30px;
+    bottom: 30px;
+    top: auto;
+    left: auto;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+  }
+  .menu-items {
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+    position: static;
+  }
+}

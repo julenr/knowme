@@ -89,3 +89,260 @@ span.show-menu .section.active,
   margin:0;
   margin-top:3px;
 }
+
+
+/*=================================================================================
+	Responsive CSS
+=================================================================================*/
+@media(max-width:1024px){
+  .intro-text{
+    padding:60px 80px;
+    padding-left:0;
+  }
+}
+@media(max-width:992px){
+  .portfolio-items > li{
+    width:50%;
+  }
+  .intro-text{
+    padding:0;
+    -webkit-transform:none;
+    -moz-transform:none;
+    -ms-transform:none;
+    -o-transform:none;
+    transform:none;
+  }
+  .info-list{
+    margin-bottom:30px;
+  }
+  .service{
+    margin-bottom:30px;
+  }
+  .main-section > .row,
+  .main-section > .row > div{
+    height:auto;
+  }
+  .main-section{
+    overflow-y:auto;
+    overflow-x:hidden;
+    padding:80px;
+  }
+  .section{
+    padding:80px;
+    padding-bottom:0;
+  }
+  .section:after,
+  .main-section:after{
+    height:80px;
+  }
+  .intro-text > p{
+    margin-bottom:40px;
+  }
+  .intro-text > .intro-btns > .btn-material{
+    margin:0;
+    display:block;
+    margin-bottom:15px;
+  }
+  .intro-text-col{
+    display:block;
+    height:auto;
+  }
+  .person-img{
+    position:relative;
+    top:0;
+    height:auto;
+    text-align:center;
+    background:#F0F0F0;
+    padding:80px 125px;
+    padding-bottom:0;
+    margin:-100px;
+    margin-bottom:100px;
+  }
+  .person-img > img{
+    position:static;
+    height:auto;
+    width:100%;
+    max-width:300px;
+  }
+  .skill:last-of-type{
+    margin-bottom:40px;
+  }
+  .p-table{
+    margin-bottom:30px;
+  }
+  .contact-info-icons{
+    padding:0;
+  }
+  .contact-form{
+    margin-top:60px;
+  }
+  div:last-of-type > .skill:last-of-type,
+  div:last-of-type > .service:last-of-type,
+  div:last-of-type > .p-table:last-of-type{
+    margin-bottom:0;
+  }
+  .main-content{
+    top:40px;
+    left:40px;
+    right:40px;
+    bottom:40px;
+  }
+}
+@media(max-width:768px){
+  .portfolio-items > li{
+    width:100%;
+  }
+}
+@media(max-width:600px){
+  .main-content{
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+  }
+  .section,
+  .main-section{
+    padding:50px;
+    padding-bottom:0;
+  }
+  .section:after,
+  .main-section:after{
+    height:50px;
+  }
+  .menu-btn{
+    right:30px;
+    bottom:30px;
+    top:auto;
+    left:auto;
+    -webkit-transform:none;
+    -moz-transform:none;
+    -ms-transform:none;
+    -o-transform:none;
+    transform:none;
+  }
+  .menu-items{
+    -webkit-transform:none;
+    -moz-transform:none;
+    -ms-transform:none;
+    -o-transform:none;
+    transform:none;
+    position:static;
+  }
+  .testimonial > .icon{
+    display:none;
+  }
+  .owl-controls{
+    margin-left:3px;
+  }
+  .testimonial > .content{
+    margin:3px;
+  }
+}
+
+@media(max-width:400px){
+  .section,
+  .main-section{
+    padding:35px 20px;
+    padding-bottom:0;
+  }
+  .section:after,
+  .main-section:after{
+    height:35px;
+  }
+  .p-table > .header > .price > .amount{
+    font-size:70px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*== Demo CSS ==*/
+.customize-btn{
+  font-size:28px;
+  color:#202020 !important;
+  text-decoration:none !important;
+  line-height:44px;
+  height:44px;
+  width:44px;
+  text-align:center;
+  vertical-align:middle;
+  background:#F0F0F0;
+  display:block;
+  position:absolute;
+  top:0;
+  left:0;
+}
+.customize-btn > i:before{
+  vertical-align:middle;
+}
+.colors{
+  position:fixed;
+  top:50%;
+  left:0;
+  -webkit-transform:translateY(-50%);
+  -moz-transform:translateY(-50%);
+  -ms-transform:translateY(-50%);
+  -o-transform:translateY(-50%);
+  transform:translateY(-50%);
+  z-index:99;
+}
+.colors > a{
+  display:block;
+  height:48px;
+  width:5px;
+  margin-bottom:2px;
+  -webkit-box-shadow: 2px 0 6px 0 rgba(0,0,0,.2);
+  -moz-box-shadow: 2px 0 6px 0 rgba(0,0,0,.2);
+  box-shadow: 2px 0 6px 0 rgba(0,0,0,.2);
+  -webkit-transition:all .3s ease;
+  -moz-transition:all .3s ease;
+  transition:all .3s ease;
+}
+.colors > a:hover{
+  width:28px;
+}
+.colors > a.active{
+  box-shadow: 2px 0 6px 0 rgba(0,0,0,.4);
+}
+.c-indigo{
+  background:#3F51B5;
+}
+.c-blue{
+  background:#2196F3;
+}
+.c-cyan{
+  background:#00BCD4;
+}
+.c-red{
+  background:#F44336;
+}
+.c-pink{
+  background:#FF4081;
+}
+.c-green{
+  background:#4CAF50;
+}
+.c-orange{
+  background:#FF5722;
+}
+.c-purple{
+  background:#9C27B0;
+}
+.c-teal{
+  background:#009688;
+}
