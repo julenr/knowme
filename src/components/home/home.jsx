@@ -28,11 +28,13 @@ class Home extends React.Component {
     return (
       <section id="home" className='section main-section active' >
         <div className="row" >
+
           <div className="col-lg-6 col-md-5 col-xs-12 img-col-main">
             <div className="person-img" >
-              <img src={require('../../assets/images/person.png')} alt="" />
+              <img src={require('../../assets/images/avatar.svg')} alt="" />
             </div>
           </div>
+
           <div className="col-lg-6 col-md-7 col-xs-12 text-col-main">
             <div className="intro-text-col">
               <div className="inner">
