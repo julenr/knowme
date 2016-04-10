@@ -1,6 +1,19 @@
 /*=================================================================================
 	Main Section
 =================================================================================*/
+
+.flex-container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.flex-avatar {
+  flex: 1 100%;
+}
+
 .main-section{
   overflow:visible;
   padding:0;
@@ -9,16 +22,12 @@
 .main-section > .row,
 .main-section > .row > div{
   height:100%;
-  position:relative;
 }
 .person-img{
-  position:absolute;
-  bottom:0;
+  height:100%;
+  position: relative;
   top:-55px;
-  left:0;
-  right:0;
   text-align:center;
-  z-index:44;
 }
 .person-img > img{
   width:auto;
@@ -54,16 +63,17 @@
   text-transform:uppercase;
 }
 .intro-text > span{
-  font-size:16px;
+  font-size:20px;
   color:#009688;
   font-weight:300;
 }
 .intro-text > p{
-  font-size:16px;
+  font-size:26px;
   color:#727272;
   color:rgba(0,0,0,.45);
   margin:0;
-  font-weight:500;
+  font-weight:100;
+  font-style: italic;
   margin-top:35px;
   line-height:1.7em;
 }
@@ -95,8 +105,6 @@ a.btn-material{
   transition:all .3s ease;
 }
 .btn-material:hover{
-  -webkit-box-shadow: 0 10px 35px 0 rgba(0,0,0,.14);
-  -moz-box-shadow: 0 10px 35px 0 rgba(0,0,0,.14);
   box-shadow: 0 10px 35px 0 rgba(0,0,0,.14);
 }
 .btn-material.btn-secondary{
