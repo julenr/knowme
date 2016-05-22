@@ -30,40 +30,14 @@ class About extends React.Component {
           <div className="container-fluid" >
             <div className="block about-block" >
               <div className="section-header" >
-                <h2>About Me</h2>
-                <p>I"m a good guy, not a bad guy</p>
-              </div>
-              <div className="row" >
-                <div className="col-md-4" >
-                  <ul className="info-list" >
-                    <li>
-                      <strong>Name:</strong>
-                      <span>John Doe</span>
-                    </li>
-                    <li>
-                      <strong>Job:</strong>
-                      <span>Freelancer</span>
-                    </li>
-                    <li>
-                      <strong>Age:</strong>
-                      <span>26 Years</span>
-                    </li>
-                    <li>
-                      <strong>Hometown:</strong>
-                      <span>Dokri</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="col-md-8" >
-                  <div className="about-text" >
-                    <p>
-                      Consul latine iudicabit eu vel. Cu has animal eru volupta tibus. Eu volumus explicari sed. Mel mutat vitupata susci piantur et, et fabellas explicari adipiscing quo. No dol em blandit theophrastus eos, nam eu per secuti repu dadae, duo hinc vide aliquip et. An has alterum nominavi. Nam at elitr veritus voluptaria. Cu eum regione tacimates vituperatoribus
-                    </p>
-                    <p>
-                      Consul latine iudicabit eu vel. Cu has animal eru volupta tibus. Eu volumus explicari sed. Mel mutat vitupata susci piantur et, et fabellas explicari adipiscing quo. No dol em blandit theophrastus eos, nam eu per secuti repu dadae, duo hinc vide aliquip et.
-                    </p>
-                  </div>
-                </div>
+                <h2>Hi</h2>
+                <p>
+                  I'm Julen Rojo, a Spanish Creative Developer based in Windy Wellington, New Zealand.
+                  I passionately move pixels and lines of code to craft clean, responsive,
+                  and user-friendly websites. My current weapons of choice are JavaScript, React, Angular and Node.
+                  Being both an engineer and designer, I help clients bring their ideas into reality.
+                  Contact me today and I would love to hear about your business
+                </p>
               </div>
             </div>
             <div className="block services-block" >

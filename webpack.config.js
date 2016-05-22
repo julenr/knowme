@@ -19,6 +19,8 @@ const webpack = require('webpack');
 const Clean = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const precss       = require('precss');
+const autoprefixer = require('autoprefixer');
 
 const pkg = require('./package.json');
 
@@ -94,8 +96,11 @@ if(TARGET === 'start' || !TARGET) {
       loaders: [
         // Define development specific CSS setup
         { test: /\.css$/, loaders: ['style', 'css']},
-        { test: /\.scss$/, loader: 'style!css!sass', include: PATHS.app }
+        { test: /\.scss$/, loader: 'style!css!postcss-loader!sass', include: PATHS.app }
       ]
+    },
+    postcss: function () {
+      return [precss, autoprefixer];
     },
     plugins: [
       new webpack.HotModuleReplacementPlugin(),

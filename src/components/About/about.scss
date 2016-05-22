@@ -2,37 +2,9 @@
 	About Section
 =================================================================================*/
 
-/*== About Block ==*/
-.about-text > p{
-  margin:0;
-  font-weight:500;
-  color:rgba(0,0,0,.45);
-  margin-bottom:10px;
-}
-.info-list{
-  margin:0;
-  padding:0;
-  list-style:none;
-  margin-top:-12px;
-}
-.info-list > li{
-  padding:13px 10px;
-  background:#FFF;
-  border-bottom:solid 1px rgba(0,0,0,.1);
-  margin-top:2px;
-}
-.info-list > li:last-of-type{
-  border-color:transparent;
-}
-.info-list > li > strong{
-  text-transform:uppercase;
-  letter-spacing:2px;
-  font-weight:bold;
-  margin-right:5px;
-}
-.info-list > li > span{
-  color:rgba(0,0,0,.45);
-  font-weight:500;
+.about-block p {
+  font-size: 1.4rem;
+  font-weight:300;
 }
 
 /*== Services Block ==*/
