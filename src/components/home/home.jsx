@@ -28,11 +28,8 @@ class Home extends React.Component {
     return (
       <section id="home" className='section main-section active' >
         <div className="flex-container" >
-
           <div className="flex-avatar">
-            <div className="person-img" >
-              <img src={require('../../assets/images/avatar.svg')} alt="" />
-            </div>
+            <div className="avatar" />
           </div>
 
           <div className="text-col-main">
