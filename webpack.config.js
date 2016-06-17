@@ -47,18 +47,17 @@ const common = {
   module: {
     loaders: [
       {
-        test: /\.jsx?$/,
-        loaders: ['react-hot', 'babel'],
-        include: PATHS.app
-      },
-      {
         test: /\.(png|jpg|gif)$/,
-        loaders: ['file-loader?name=assets/images/[name].[ext]'],
+        loaders: ['url-loader?limit=70000&name=assets/images/[name].[ext]'],
         include: PATHS.app
       },
       {
-        test: /\.(woff|ttf|eot|svg|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         loader: 'file-loader?name=assets/fonts/[name].[ext]'
+      },
+      {
+        test: /\.(woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'url-loader?limit=30000&name=assets/fonts/[name].[ext]'
       },
       { test: /\.html$/, loader: 'raw', include: PATHS.app }
     ],
@@ -95,6 +94,7 @@ if(TARGET === 'start' || !TARGET) {
     module: {
       loaders: [
         // Define development specific CSS setup
+        { test: /\.jsx?$/, loaders: ['react-hot', 'babel?cacheDirectory'], include: PATHS.app },
         { test: /\.css$/, loaders: ['style', 'css']},
         { test: /\.scss$/, loader: 'style!css!postcss-loader!sass', include: PATHS.app }
       ]
@@ -104,11 +104,6 @@ if(TARGET === 'start' || !TARGET) {
     },
     plugins: [
       new webpack.HotModuleReplacementPlugin(),
-      new webpack.ProvidePlugin({
-        $: "jquery",
-        jQuery: "jquery",
-        "window.jQuery": "jquery"
-      }),
       new HtmlwebpackPlugin({
         template: './templates/index.webpack.ejs',
         title: APP_TITLE
@@ -134,19 +129,14 @@ if(TARGET === 'build') {
     },
     module: {
       loaders: [
-        {
-        test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('style', 'css!sass'),
-        include: PATHS.app
-        }
+        { test: /\.jsx?$/, loaders: ['babel'], include: PATHS.app },
+        { test: /\.scss$/, loader: ExtractTextPlugin.extract('style', 'css!postcss-loader!sass') }
       ]
     },
+    postcss: function () {
+      return [precss, autoprefixer];
+    },
     plugins: [
-      new webpack.ProvidePlugin({
-        $: "jquery",
-        jQuery: "jquery",
-        "window.jQuery": "jquery"
-      }),
       new Clean([PATHS.build], {
         verbose: true,
         dry: false
