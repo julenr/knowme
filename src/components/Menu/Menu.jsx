@@ -23,31 +23,31 @@ const Menu = (props) => {
       <nav className="menu-items" >
         <ul>
           <li>
-            <Link to="/" data-section="home" onClick={() => this.props.menuButtonClick()}>
+            <Link to="/" data-section="home" onClick={() => props.menuButtonClick()}>
               <i className="ion-ios-home-outline" />
               <span>Home</span>
             </Link>
           </li>
           <li>
-            <Link to="/about" data-section="about" onClick={() => this.props.menuButtonClick()}>
+            <Link to="/about" data-section="about" onClick={() => props.menuButtonClick()}>
               <i className="ion-ios-person-outline" />
               <span>About</span>
             </Link>
           </li>
           <li>
-            <Link to="/resume" data-section="resume" onClick={() => this.props.menuButtonClick()}>
+            <Link to="/resume" data-section="resume" onClick={() => props.menuButtonClick()}>
               <i className="ion-ios-book-outline" />
               <span>Resume</span>
             </Link>
           </li>
           <li>
-            <Link to="/portfolio" data-section="portfolio" onClick={() => this.props.menuButtonClick()}>
+            <Link to="/portfolio" data-section="portfolio" onClick={() => props.menuButtonClick()}>
               <i className="ion-ios-briefcase-outline" />
               <span>Portfolio</span>
             </Link>
           </li>
           <li>
-            <Link to="/contact" data-section="contact" onClick={() => this.props.menuButtonClick()}>
+            <Link to="/contact" data-section="contact" onClick={() => props.menuButtonClick()}>
               <i className="ion-ios-email-outline" />
               <span>Contact Me</span>
             </Link>
