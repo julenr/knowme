@@ -30,8 +30,6 @@
   line-height:64px;
   border-radius:50%;
   background:#009688;
-  -webkit-box-shadow: 0 3px 15px 0 rgba(0,0,0,.18);
-  -moz-box-shadow: 0 3px 15px 0 rgba(0,0,0,.18);
   box-shadow: 0 3px 15px 0 rgba(0,0,0,.18);
   top:50%;
   margin-top:-32px;
@@ -40,13 +38,9 @@
   overflow:hidden;
   text-align:center;
   z-index:999;
-  -webkit-transition:all .3s ease;
-  -moz-transition:all .3s ease;
   transition:all .3s ease;
 }
 .menu-btn:hover{
-  -webkit-box-shadow: 0 10px 35px 0 rgba(0,0,0,.18);
-  -moz-box-shadow: 0 10px 35px 0 rgba(0,0,0,.18);
   box-shadow: 0 10px 35px 0 rgba(0,0,0,.18);
 }
 .menu-btn > .lines{
@@ -124,4 +118,52 @@ span.show-menu .menu-btn > .lines > .l3{
     transform: none;
     position: static;
   }
+}
+
+
+// SVG BUTTONS
+.svg-wrapper {
+  height: 60px;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 320px;
+  text-align: center;
+}
+
+.shape {
+  fill: transparent;
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 8px;
+  stroke: #009688;
+}
+
+.text {
+  color: #727272;
+  font-family: 'Roboto';
+  text-transform:uppercase;
+  font-weight:600;
+  letter-spacing: 2px;
+  line-height: 32px;
+  position: relative;
+  top: -48px;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+  }
+  100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 2px;
+  }
+}
+
+.svg-wrapper:hover .shape {
+  animation: 0.5s draw linear forwards;
 }

@@ -12,173 +12,109 @@
 //
 
 import React from "react";
+import { connect } from "react-redux";
 
 // SASS Stylesheets
 import "./portfolio.scss";
 
-const Portfolio = (props) => {
-  return (
-      <section id="portfolio" className="section portfolio-section active" >
-        <div className="container-fluid" >
-          <div className="block portfolio-block" >
-            <div className="section-header" >
-              <h2>Portfolio</h2>
-              <p>See my latest projects Ive been working on</p>
-            </div>
-            <ul className="portfolio-filters" >
-              <li>
-                <a href="#" className="active" data-group="all" >
-                  All
-                </a>
-              </li>
-              <li>
-                <a href="#" data-group="web" >
-                  Web
-                </a>
-              </li>
-              <li>
-                <a href="#" data-group="tech" >
-                  Tech
-                </a>
-              </li>
-              <li>
-                <a href="#" data-group="photography" >
-                  Photography
-                </a>
-              </li>
-            </ul>
-            <ul className="portfolio-items" >
-              <li data-groups="['tech']" >
-                <div className="inner" >
-                  <img src={require('../../assets/images/1.jpg')} />
-                    <div className="overlay" >
-                      <a href="#popup-1" className="has-popup view-project" >
-                        view project
-                      </a>
-                      <div id="popup-1" className="popup-box zoom-anim-dialog mfp-hide" >
-                        <figure>
-                          <img src={require('../../assets/images/1.jpg')} />
-                        </figure>
-                        <div className="content" >
-                          <h4>My Project Title</h4>
-                          <p>
-                            Consul latine iudicabit eu vel. Cu has animal eruditi voluptatibus. Eu volumus explicari sed. Mel mutat vituperata suscipiantur et, et fabellas explicari adipiscing quo, no mucius euismod vis. Cu vim quem quod cibo.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-              </li>
-              <li data-groups="['photography', 'web']" >
-                <div className="inner" >
-                  <img src={require('../../assets/images/2.jpg')} />
-                    <div className="overlay" >
-                      <a href="#popup-2" className="has-popup view-project" >
-                        view project
-                      </a>
-                      <div id="popup-2" className="popup-box zoom-anim-dialog mfp-hide" >
-                        <figure>
-                          <img src={require('../../assets/images/2.jpg')} />
-                        </figure>
-                        <div className="content" >
-                          <h4>My Project Title</h4>
-                          <p>
-                            Consul latine iudicabit eu vel. Cu has animal eruditi voluptatibus. Eu volumus explicari sed. Mel mutat vituperata suscipiantur et, et fabellas explicari adipiscing quo, no mucius euismod vis. Cu vim quem quod cibo.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-              </li>
-              <li data-groups="['tech'', 'web']" >
-                <div className="inner" >
-                  <img src={require('../../assets/images/3.jpg')} />
-                    <div className="overlay" >
-                      <a href="#popup-3" className="has-popup view-project" >
-                        view project
-                      </a>
-                      <div id="popup-3" className="popup-box zoom-anim-dialog mfp-hide" >
-                        <figure>
-                          <img src={require('../../assets/images/3.jpg')} />
-                        </figure>
-                        <div className="content" >
-                          <h4>My Project Title</h4>
-                          <p>
-                            Consul latine iudicabit eu vel. Cu has animal eruditi voluptatibus. Eu volumus explicari sed. Mel mutat vituperata suscipiantur et, et fabellas explicari adipiscing quo, no mucius euismod vis. Cu vim quem quod cibo.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-              </li>
-              <li data-groups="['photography','tech']" >
-                <div className="inner" >
-                  <img src={require('../../assets/images/4.jpg')} />
-                    <div className="overlay" >
-                      <a href="#popup-4" className="has-popup view-project" >
-                        view project
-                      </a>
-                      <div id="popup-4" className="popup-box zoom-anim-dialog mfp-hide" >
-                        <figure>
-                          <img src={require('../../assets/images/4.jpg')} />
-                        </figure>
-                        <div className="content" >
-                          <h4>My Project Title</h4>
-                          <p>
-                            Consul latine iudicabit eu vel. Cu has animal eruditi voluptatibus. Eu volumus explicari sed. Mel mutat vituperata suscipiantur et, et fabellas explicari adipiscing quo, no mucius euismod vis. Cu vim quem quod cibo.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-              </li>
-              <li data-groups="['web']" >
-                <div className="inner" >
-                  <img src={require('../../assets/images/5.jpg')} />
-                    <div className="overlay" >
-                      <a href="#popup-5" className="has-popup view-project" >
-                        view project
-                      </a>
-                      <div id="popup-5" className="popup-box zoom-anim-dialog mfp-hide" >
-                        <figure>
-                          <img src={require('../../assets/images/5.jpg')} />
-                        </figure>
-                        <div className="content" >
-                          <h4>My Project Title</h4>
-                          <p>
-                            Consul latine iudicabit eu vel. Cu has animal eruditi voluptatibus. Eu volumus explicari sed. Mel mutat vituperata suscipiantur et, et fabellas explicari adipiscing quo, no mucius euismod vis. Cu vim quem quod cibo.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-              </li>
-              <li data-groups="['photography']" >
-                <div className="inner" >
-                  <img src={require('../../assets/images/6.jpg')} />
-                    <div className="overlay" >
-                      <a href="#popup-6" className="has-popup view-project" >
-                        view project
-                      </a>
-                      <div id="popup-6" className="popup-box zoom-anim-dialog mfp-hide" >
-                        <figure>
-                          <img src={require('../../assets/images/6.jpg')} />
-                        </figure>
-                        <div className="content" >
-                          <h4>My Project Title</h4>
-                          <p>
-                            Consul latine iudicabit eu vel. Cu has animal eruditi voluptatibus. Eu volumus explicari sed. Mel mutat vituperata suscipiantur et, et fabellas explicari adipiscing quo, no mucius euismod vis. Cu vim quem quod cibo.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-              </li>
-            </ul>
+function mapStateToProps(state) {
+  return {
+    Portfolio: state._portfolio
+  };
+}
+
+class Portfolio extends React.Component {
+  componentDidMount(){
+      var speed = 300;
+      var easing = mina.backout;
+
+      [].slice.call ( document.querySelectorAll( '#grid > a' ) ).forEach( function( el ) {
+        var s = Snap( el.querySelector( 'svg' ) ), path = s.select( 'path' ),
+          pathConfig = {
+            from : path.attr( 'd' ),
+            to : el.getAttribute( 'data-path-hover' )
+          };
+
+        el.addEventListener( 'mouseenter', function() {
+          path.animate( { 'path' : pathConfig.to }, speed, easing );
+        } );
+
+        el.addEventListener( 'mouseleave', function() {
+          path.animate( { 'path' : pathConfig.from }, speed, easing );
+        } );
+      } );
+  }
+
+  render () {
+    const {title} = this.props.Portfolio;
+    return (
+      <section id="portfolio" className="section portfolio-section active">
+        <div className="portfolio-flex-container">
+          <div className="section-header">
+            <h2>{title}</h2>
           </div>
+          <section id="grid" className="grid clearfix">
+            <a href="#" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
+              <figure>
+                <img src={require('../../assets/images/1.png')} />
+                <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                  <path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z "/>
+                </svg>
+                <figcaption>
+                  <h2>Crystalline</h2>
+                  <p>Soko radicchio bunya nuts gram dulse.</p>
+                  <button>View</button>
+                </figcaption>
+              </figure>
+            </a>
+            <a href="#" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
+              <figure>
+                <img src={require('../../assets/images/1.png')} />
+                <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                  <path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z "/>
+                </svg>
+                <figcaption>
+                  <h2>Crystalline</h2>
+                  <p>Soko radicchio bunya nuts gram dulse.</p>
+                  <button>View</button>
+                </figcaption>
+              </figure>
+            </a>
+            <a href="#" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
+              <figure>
+                <img src={require('../../assets/images/1.png')} />
+                <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                  <path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z "/>
+                </svg>
+                <figcaption>
+                  <h2>Crystalline</h2>
+                  <p>Soko radicchio bunya nuts gram dulse.</p>
+                  <button>View</button>
+                </figcaption>
+              </figure>
+            </a>
+            <a href="#" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
+              <figure>
+                <img src={require('../../assets/images/1.png')} />
+                <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                  <path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z "/>
+                </svg>
+                <figcaption>
+                  <h2>Crystalline</h2>
+                  <p>Soko radicchio bunya nuts gram dulse.</p>
+                  <button>View</button>
+                </figcaption>
+              </figure>
+            </a>
+          </section>
         </div>
       </section>
-  );
-};
+    );
+  }
+}
 
-export default Portfolio;
+export default connect(
+  mapStateToProps, {
+
+  }
+)(Portfolio);

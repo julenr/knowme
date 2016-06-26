@@ -24,6 +24,7 @@ import './styles/ionicons/ionicons.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, Link, IndexRoute, hashHistory } from 'react-router';
+import Snap from 'imports-loader?this=>window,fix=>module.exports=0!snapsvg/dist/snap.svg.js';
 
 // REDUX STORE
 import store from './redux/create-store';

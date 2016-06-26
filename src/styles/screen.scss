@@ -14,7 +14,6 @@ img{
 }
 ::-webkit-scrollbar{
   background:#FFF;
-  -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.18);
   box-shadow: 0 0 10px 0 rgba(0,0,0,.18);
   width:11px;
   height:11px;
@@ -104,8 +103,6 @@ a.btn-material{
   text-transform:uppercase;
   letter-spacing:2px;
   font-weight:600;
-  -webkit-transition:all .3s ease;
-  -moz-transition:all .3s ease;
   transition:all .3s ease;
 }
 .btn-material:hover{
@@ -114,8 +111,6 @@ a.btn-material{
 .btn-material.btn-secondary{
   background:#FFF;
   color:#727272;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   box-shadow: none;
   border-color:transparent;
 }

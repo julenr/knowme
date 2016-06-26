@@ -44,11 +44,24 @@ class Home extends React.Component {
                     <Link to="/contact" className="btn-material" data-section="contact" onClick={() => props.menuButtonClick()}>
                       {hireMe}
                     </Link>
-                    <a href={require('../../assets/rojojulenresume.pdf')} className="btn-material btn-secondary" download>
-                      {downloadResume}
+                    <a href={require('../../assets/rojojulenresume.pdf')} download>
+                      <div className="svg-wrapper">
+                        <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+                          <rect className="shape" height="60" width="320" />
+                        </svg>
+                        <div className="text">{downloadResume}</div>
+                      </div>
                     </a>
+
+
+
                   </div>
+
+
+
+
                 </div>
+
               </div>
             </div>
           </div>
