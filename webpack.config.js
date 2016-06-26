@@ -59,7 +59,11 @@ const common = {
         test: /\.(woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         loader: 'url-loader?limit=30000&name=assets/fonts/[name].[ext]'
       },
-      { test: /\.html$/, loader: 'raw', include: PATHS.app }
+      { test: /\.html$/, loader: 'raw', include: PATHS.app },
+      {
+        test: /\.pdf(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'file-loader?minetype=application/pdf&name=[name].pdf'
+      }
     ],
     preLoaders: [
       {

@@ -12,52 +12,57 @@
 //
 
 import React from "react";
+import { connect } from "react-redux";
 
 // SASS Stylesheets
 import "./contact.scss";
 
-const Contact = (props) => {
-  return (
-      <section id="contact" className="section contact-section active" >
-        <div className="container-fluid" >
-          <div className="block contact-block" >
-            <div className="section-header" >
-              <h2>Get in touch and let's start something great together</h2>
+function mapStateToProps(state) {
+  return {
+    Contact: state._contact
+  };
+}
+
+
+class Contact extends React.Component {
+  render () {
+    const {Telephone, Github, Mail, LinkedIn, TelephoneTxt} = this.props.Contact;
+    return (
+      <section id="contact" className="section contact-section active">
+        <div className="contact-flex-container" >
+          <div className="section-header">
+            <h2>Get in touch and let's start something great together</h2>
+          </div>
+          <div className="contact-info-icons">
+            <div className="contact-phone">
+              <a href={`tel:${Telephone}`} alt={TelephoneTxt} title={TelephoneTxt}>
+                <i className="ion-iphone"/>
+              </a>
             </div>
-            <div className="row" >
-              <div className="col-md-4 col-md-push-8" >
-                <div className="contact-info-icons" >
-                  <div className="contact-info" >
-                    <i className="ion-ios-telephone-outline" />
-                    <p>
-                      (+64) 223-515-860<br/>
-                    </p>
-                  </div>
-                  <div className="contact-info" >
-                    <i className="ion-ios-at" ></i>
-                    <p>
-                      julen.rojo@gmail.com<br/>
-                    </p>
-                  </div>
-                  <div className="contact-linkedin" >
-                    <i className="ion-social-linkedin" />
-                    <p>
-                      julen.rojo@gmail.com
-                    </p>
-                  </div>
-                  <div className="contact-github" >
-                    <i className="ion-social-github" />
-                    <p>
-                      https://github.com/julenr
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <div className="contact-mail">
+              <a href={`mailto:${Mail}`} alt={Mail} title={Mail}>
+                <i className="ion-android-mail"/>
+              </a>
+            </div>
+            <div className="contact-linkedin">
+              <a href={LinkedIn} alt={LinkedIn} title={LinkedIn}>
+                <i className="ion-social-linkedin"/>
+              </a>
+            </div>
+            <div className="contact-github">
+              <a href={Github} alt={Github} title={Github}>
+                <i className="ion-social-github"/>
+              </a>
             </div>
           </div>
         </div>
       </section>
-  );
-};
+    );
+  }
+}
 
-export default Contact;
+export default connect(
+  mapStateToProps, {
+
+  }
+)(Contact);

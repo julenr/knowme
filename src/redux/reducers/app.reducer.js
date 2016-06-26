@@ -1,6 +1,11 @@
 
 const initialState = {
-  burgerButton: false
+  burgerButton: false,
+  about: {},
+  home: {},
+  menu: {},
+  portfolio: {},
+  resume: {}
 };
 
 
