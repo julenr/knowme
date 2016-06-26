@@ -13,40 +13,39 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router';
 
 // SASS Stylesheets
 import './home.scss';
 
 function mapStateToProps(state, ownProps) {
   return {
-
+    Home: state._home
   };
 }
 
 class Home extends React.Component {
   render() {
+    const {introTitle, introSubTitle, cites, hireMe, downloadResume} = this.props.Home;
     return (
       <section id="home" className='section main-section active' >
         <div className="flex-container" >
           <div className="flex-avatar">
             <div className="avatar" />
           </div>
-
           <div className="text-col-main">
             <div className="intro-text-col">
               <div className="inner">
                 <div className="intro-text">
-                  <h1>I'm Julen Rojo</h1>
-                  <span>a JavaScript functional programmer</span>
-                  <p>
-                    "Sometimes, the elegant implementation is just a function. Not a method. Not a class. Not a framework. Just a function."
-                  </p>
+                  <h1>{introTitle}</h1>
+                  <span>{introSubTitle}</span>
+                  <p>{cites[0]}</p>
                   <div className="intro-btns" >
-                    <a href="#" className="btn-material" >
-                      Hire Me
-                    </a>
-                    <a href="#" className="btn-material btn-secondary" >
-                      Download Resume
+                    <Link to="/contact" className="btn-material" data-section="contact" onClick={() => props.menuButtonClick()}>
+                      {hireMe}
+                    </Link>
+                    <a href={require('../../assets/rojojulenresume.pdf')} className="btn-material btn-secondary" download>
+                      {downloadResume}
                     </a>
                   </div>
                 </div>

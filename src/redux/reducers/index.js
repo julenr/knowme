@@ -7,7 +7,8 @@ import { _app } from './app.reducer';
 import { _resume } from './resume.reducer';
 import { _contact } from './contact.reducer';
 import { _home } from './home.reducer';
+import { _about } from './about.reducer';
 
 export default combineReducers({
-  _app, _resume, _contact, _home
+  _app, _resume, _contact, _home, _about
 });

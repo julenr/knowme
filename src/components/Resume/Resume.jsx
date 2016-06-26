@@ -19,32 +19,32 @@ import "./resume.scss";
 
 function mapStateToProps(state) {
   return {
-    Education: state._resume.education,
-    Experience: state._resume.experience
+    Resume: state._resume
   };
 }
 
 class Resume extends React.Component {
   render () {
+    const {experience, education} = this.props.Resume;
     return (
         <section id="resume" className="section resume-section active" >
             <div className="container-fluid" >
               <div className="block timeline-block" >
                 <div className="section-header" >
-                  <h2>Education</h2>
-                  <p>Take a look at the places where I've studied</p>
+                  <h2>{education.title}</h2>
+                  <p>{education.descripcion}</p>
                 </div>
                 <ul className="timeline" >
-                  {this.props.Education.map(this.renderEducation)}
+                  {education.institutions.map(this.renderEducation)}
                 </ul>
               </div>
               <div className="block timeline-block experience-block" >
                 <div className="section-header" >
-                  <h2>My Experience</h2>
-                  <p>Take a look at the places where I've worked</p>
+                  <h2>{experience.title}</h2>
+                  <p>{experience.descripcion}</p>
                 </div>
                 <ul className="timeline" >
-                  {this.props.Experience.map(this.renderExperience)}
+                  {experience.companies.map(this.renderExperience)}
                 </ul>
               </div>
 
