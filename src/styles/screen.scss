@@ -126,15 +126,6 @@ a.btn-material{
 @media(max-width:1024px){
 }
 @media(max-width:992px){
-  //.portfolio-items > li{
-  //  width:50%;
-  //}
-  //.info-list{
-  //  margin-bottom:30px;
-  //}
-  //.service{
-  //  margin-bottom:30px;
-  //}
   .section{
     padding:80px;
     padding-bottom:0;
@@ -142,23 +133,6 @@ a.btn-material{
   .section:after{
     height:80px;
   }
-  //.skill:last-of-type{
-  //  margin-bottom:40px;
-  //}
-  //.p-table{
-  //  margin-bottom:30px;
-  //}
-  //.contact-info-icons{
-  //  padding:0;
-  //}
-  //.contact-form{
-  //  margin-top:60px;
-  //}
-  //div:last-of-type > .skill:last-of-type,
-  //div:last-of-type > .service:last-of-type,
-  //div:last-of-type > .p-table:last-of-type{
-  //  margin-bottom:0;
-  //}
   .main-content{
     top:40px;
     left:40px;
@@ -166,149 +140,103 @@ a.btn-material{
     bottom:40px;
   }
 }
-@media(max-width:768px){
-  //.portfolio-items > li{
-  //  width:100%;
-  //}
-}
-@media(max-width:600px){
-  .main-content{
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
+
+@media(max-width:600px) {
+  .main-content {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
   .section {
-    padding:50px;
-    padding-bottom:0;
+    padding: 50px;
+    padding-bottom: 0;
   }
   .section:after {
-    height:50px;
+    height: 50px;
   }
-  .menu-btn{
-    right:30px;
-    bottom:30px;
-    top:auto;
-    left:auto;
-    transform:none;
+  .menu-btn {
+    right: 30px;
+    bottom: 30px;
+    top: auto;
+    left: auto;
+    transform: none;
   }
-  .menu-items{
-    transform:none;
-    position:static;
+  .menu-items {
+    transform: none;
+    position: static;
   }
-  //.testimonial > .icon{
-  //  display:none;
-  //}
-  //.owl-controls{
-  //  margin-left:3px;
-  //}
-  //.testimonial > .content{
-  //  margin:3px;
-  //}
 }
-
-@media(max-width:400px){
+@media(max-width:400px) {
   .section {
-    padding:35px 20px;
-    padding-bottom:0;
+    padding: 35px 20px;
+    padding-bottom: 0;
   }
   .section:after {
-    height:35px;
+    height: 35px;
   }
-  //.p-table > .header > .price > .amount{
-  //  font-size:70px;
-  //}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*== Demo CSS ==*/
-.customize-btn{
-  font-size:28px;
-  color:#202020 !important;
-  text-decoration:none !important;
-  line-height:44px;
-  height:44px;
-  width:44px;
-  text-align:center;
-  vertical-align:middle;
-  background:#F0F0F0;
-  display:block;
-  position:absolute;
-  top:0;
-  left:0;
+// SVG BUTTONS
+.svg-wrapper {
+  height: 60px;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 320px;
+  text-align: center;
 }
-.customize-btn > i:before{
-  vertical-align:middle;
+
+.shape {
+  fill: transparent;
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 8px;
+  stroke: #009688;
 }
-.colors{
-  position:fixed;
-  top:50%;
-  left:0;
-  -webkit-transform:translateY(-50%);
-  -moz-transform:translateY(-50%);
-  -ms-transform:translateY(-50%);
-  -o-transform:translateY(-50%);
-  transform:translateY(-50%);
-  z-index:99;
+
+.text {
+  color: #727272;
+  font-family: 'Roboto';
+  text-transform:uppercase;
+  font-weight:600;
+  letter-spacing: 2px;
+  line-height: 32px;
+  position: relative;
+  top: -48px;
 }
-.colors > a{
-  display:block;
-  height:48px;
-  width:5px;
-  margin-bottom:2px;
-  -webkit-box-shadow: 2px 0 6px 0 rgba(0,0,0,.2);
-  -moz-box-shadow: 2px 0 6px 0 rgba(0,0,0,.2);
-  box-shadow: 2px 0 6px 0 rgba(0,0,0,.2);
-  -webkit-transition:all .3s ease;
-  -moz-transition:all .3s ease;
-  transition:all .3s ease;
+
+@keyframes in {
+  0% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+  }
+  100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 2px;
+  }
 }
-.colors > a:hover{
-  width:28px;
+
+@keyframes out {
+  100% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+  }
+  0% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 2px;
+  }
+
 }
-.colors > a.active{
-  box-shadow: 2px 0 6px 0 rgba(0,0,0,.4);
+
+.svg-wrapper:hover .shape {
+  animation: 0.5s in linear forwards;
 }
-.c-indigo{
-  background:#3F51B5;
-}
-.c-blue{
-  background:#2196F3;
-}
-.c-cyan{
-  background:#00BCD4;
-}
-.c-red{
-  background:#F44336;
-}
-.c-pink{
-  background:#FF4081;
-}
-.c-green{
-  background:#4CAF50;
-}
-.c-orange{
-  background:#FF5722;
-}
-.c-purple{
-  background:#9C27B0;
-}
-.c-teal{
-  background:#009688;
+.svg-wrapper:not( :hover ) .shape {
+  animation: 0.5s out linear forwards;
 }

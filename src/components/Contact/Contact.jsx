@@ -26,7 +26,7 @@ function mapStateToProps(state) {
 
 class Contact extends React.Component {
   render () {
-    const {Telephone, Github, Mail, LinkedIn, TelephoneTxt} = this.props.Contact;
+    const {telephone, github, mail, linkedin, telephonetxt} = this.props.Contact;
     return (
       <section id="contact" className="section contact-section active">
         <div className="contact-flex-container" >
@@ -35,22 +35,22 @@ class Contact extends React.Component {
           </div>
           <div className="contact-info-icons">
             <div className="contact-phone">
-              <a href={`tel:${Telephone}`} alt={TelephoneTxt} title={TelephoneTxt}>
+              <a href={`tel:${telephone}`} alt={telephonetxt} title={telephonetxt}>
                 <i className="ion-iphone"/>
               </a>
             </div>
             <div className="contact-mail">
-              <a href={`mailto:${Mail}`} alt={Mail} title={Mail}>
+              <a href={`mailto:${mail}`} alt={mail} title={mail}>
                 <i className="ion-android-mail"/>
               </a>
             </div>
             <div className="contact-linkedin">
-              <a href={LinkedIn} alt={LinkedIn} title={LinkedIn}>
+              <a href={linkedin} alt={linkedin} title={linkedin}>
                 <i className="ion-social-linkedin"/>
               </a>
             </div>
             <div className="contact-github">
-              <a href={Github} alt={Github} title={Github}>
+              <a href={github} alt={github} title={github}>
                 <i className="ion-social-github"/>
               </a>
             </div>

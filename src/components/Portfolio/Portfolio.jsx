@@ -61,8 +61,8 @@ class Portfolio extends React.Component {
                   <path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z "/>
                 </svg>
                 <figcaption>
-                  <h2>Crystalline</h2>
-                  <p>Soko radicchio bunya nuts gram dulse.</p>
+                  <h2>Skills Transition Tool</h2>
+                  <p>This website will help you find a course and a better job based on the skills you have and the things you want from work and study</p>
                   <button>View</button>
                 </figcaption>
               </figure>
@@ -74,7 +74,7 @@ class Portfolio extends React.Component {
                   <path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z "/>
                 </svg>
                 <figcaption>
-                  <h2>Crystalline</h2>
+                  <h2>ACC Invoice Provider System</h2>
                   <p>Soko radicchio bunya nuts gram dulse.</p>
                   <button>View</button>
                 </figcaption>

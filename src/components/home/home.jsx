@@ -52,16 +52,8 @@ class Home extends React.Component {
                         <div className="text">{downloadResume}</div>
                       </div>
                     </a>
-
-
-
                   </div>
-
-
-
-
                 </div>
-
               </div>
             </div>
           </div>

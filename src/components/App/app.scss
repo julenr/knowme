@@ -16,10 +16,6 @@
   width:600px;
   background:#FFF;
   z-index:2;
-  -webkit-transform:rotate(45deg);
-  -moz-transform:rotate(45deg);
-  -ms-transform:rotate(45deg);
-  -o-transform:rotate(45deg);
   transform:rotate(45deg);
 }
 
@@ -61,8 +57,6 @@
   width:32px;
   margin:auto;
   background:#FFF;
-  -webkit-transition:all .3s ease;
-  -moz-transition:all .3s ease;
   transition:all .3s ease;
 }
 .menu-btn > .lines > .l1{
@@ -83,17 +77,9 @@ span.show-menu .menu-btn > .lines > .l3{
   margin-top:-2px;
 }
 span.show-menu .menu-btn > .lines > .l1{
-  -webkit-transform:rotate(45deg);
-  -moz-transform:rotate(45deg);
-  -ms-transform:rotate(45deg);
-  -o-transform:rotate(45deg);
   transform:rotate(45deg);
 }
 span.show-menu .menu-btn > .lines > .l3{
-  -webkit-transform:rotate(-45deg);
-  -moz-transform:rotate(-45deg);
-  -ms-transform:rotate(-45deg);
-  -o-transform:rotate(-45deg);
   transform:rotate(-45deg);
 }
 
@@ -104,66 +90,10 @@ span.show-menu .menu-btn > .lines > .l3{
     bottom: 30px;
     top: auto;
     left: auto;
-    -webkit-transform: none;
-    -moz-transform: none;
-    -ms-transform: none;
-    -o-transform: none;
     transform: none;
   }
   .menu-items {
-    -webkit-transform: none;
-    -moz-transform: none;
-    -ms-transform: none;
-    -o-transform: none;
     transform: none;
     position: static;
   }
-}
-
-
-// SVG BUTTONS
-.svg-wrapper {
-  height: 60px;
-  margin: 0 auto;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 320px;
-  text-align: center;
-}
-
-.shape {
-  fill: transparent;
-  stroke-dasharray: 140 540;
-  stroke-dashoffset: -474;
-  stroke-width: 8px;
-  stroke: #009688;
-}
-
-.text {
-  color: #727272;
-  font-family: 'Roboto';
-  text-transform:uppercase;
-  font-weight:600;
-  letter-spacing: 2px;
-  line-height: 32px;
-  position: relative;
-  top: -48px;
-}
-
-@keyframes draw {
-  0% {
-    stroke-dasharray: 140 540;
-    stroke-dashoffset: -474;
-    stroke-width: 8px;
-  }
-  100% {
-    stroke-dasharray: 760;
-    stroke-dashoffset: 0;
-    stroke-width: 2px;
-  }
-}
-
-.svg-wrapper:hover .shape {
-  animation: 0.5s draw linear forwards;
 }
