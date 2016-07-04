@@ -46,7 +46,7 @@ class Home extends React.Component {
                     </Link>
                     <a href={require('../../assets/rojojulenresume.pdf')} download>
                       <div className="svg-wrapper">
-                        <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+                        <svg height="60" width="320">
                           <rect className="shape" height="60" width="320" />
                         </svg>
                         <div className="text">{downloadResume}</div>
