@@ -19,7 +19,7 @@ const webpack = require('webpack');
 const Clean = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const precss       = require('precss');
+const precss = require('precss');
 const autoprefixer = require('autoprefixer');
 
 const pkg = require('./package.json');
@@ -114,7 +114,10 @@ if(TARGET === 'start' || !TARGET) {
       }),
       new webpack.DefinePlugin({
         '__DEV__': JSON.stringify(JSON.parse('true'))
-      })
+      }),
+      new CopyWebpackPlugin([
+        { from: PATHS.app + '/assets/images', to: './assets/images' }
+      ])
     ]
   });
 }
