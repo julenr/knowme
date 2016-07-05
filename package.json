@@ -1,8 +1,9 @@
 {
   "name": "RojoJ",
-  "version": "0.1.0",
-  "description": "Personal Web App",
+  "version": "0.2.0",
+  "description": "Julen Rojo Personal Web App",
   "scripts": {
+    "prebuild": "npm version patch",
     "build": "webpack --display-error-details",
     "start": "webpack-dev-server",
     "test": "karma start",
