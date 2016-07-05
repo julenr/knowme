@@ -2,8 +2,7 @@
 const initialState = {
   portfolioTitle: 'Portfolio',
   projects: {
-    sectionTitle: 'Projects',
-    description: '',
+    sectionTitle: 'Here’s a selection of some of the projects I’ve lovingly crafted over the last few years',
     collection: [
       {
         title: 'Skills Builder',

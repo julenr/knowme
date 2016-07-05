@@ -1,153 +1,20 @@
-/*=================================================================================
-	About Section
-=================================================================================*/
-
-.about-block p {
-  font-size: 1.4rem;
-  font-weight:300;
+.about-flex-container {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/*== Services Block ==*/
-.services-block{
-  padding-top:100px;
-}
-.service{
-  position:relative;
-  padding:40px 35px;
-  -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,.2);
-  -moz-box-shadow: 0 1px 4px 0 rgba(0,0,0,.2);
-  box-shadow: 0 1px 4px 0 rgba(0,0,0,.2);
-  -webkit-transition:all .3s ease;
-  -moz-transition:all .3s ease;
-  transition:all .3s ease;
-}
-.service:hover{
-  -webkit-box-shadow: 0 15px 50px 0 rgba(0,0,0,.14);
-  -moz-box-shadow: 0 15px 50px 0 rgba(0,0,0,.14);
-  box-shadow: 0 15px 50px 0 rgba(0,0,0,.14);
-}
-.service > i{
-  font-size:0;
-  text-align:center;
-}
-.service > i:before{
-  font-size:64px;
-  line-height:1em;
-  vertical-align:middle;
-}
-.service > h4{
-  margin-top:35px;
-  margin-bottom:25px;
-  font-weight:bold;
-  text-transform:uppercase;
-  letter-spacing:2px;
-}
-.service > p{
-  margin:0;
-  color:rgba(0,0,0,.45);
-  font-weight:500;
+*, *:after, *:before { box-sizing: border-box; }
+
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
 }
 
-/*== Skills Block ==*/
-.skills-block{
-  padding-top:100px;
-}
-.skill{
-  position:relative;
-}
-.skill{
-  margin-bottom:40px;
-}
-.skill:last-of-type{
-  margin-bottom:0;
-}
-.skill > h4{
-  margin-bottom:8px;
-  margin-top:0;
-  font-size:14px;
-}
-.skill > .skill-bar{
-  -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,.2);
-  -moz-box-shadow: 0 1px 4px 0 rgba(0,0,0,.2);
-  box-shadow: 0 1px 4px 0 rgba(0,0,0,.2);
-  background:#FAFAFA;
-  position:relative;
-  height:12px;
-}
-.skill > .skill-bar > .percent{
-  height:100%;
-  width:10%;
-  background:#009688;
-}
-
-/*== Pricing Block ==*/
-.pricing-block{
-  padding-top:100px;
-}
-.p-table{
-  position:relative;
-  padding:40px;
-  -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,.2);
-  -moz-box-shadow: 0 1px 4px 0 rgba(0,0,0,.2);
-  box-shadow: 0 1px 4px 0 rgba(0,0,0,.2);
-  text-align:center;
-  -webkit-transition:all .3s ease;
-  -moz-transition:all .3s ease;
-  transition:all .3s ease;
-}
-.p-table:hover{
-  -webkit-box-shadow: 0 15px 50px 0 rgba(0,0,0,.14);
-  -moz-box-shadow: 0 15px 50px 0 rgba(0,0,0,.14);
-  box-shadow: 0 15px 50px 0 rgba(0,0,0,.14);
-}
-.p-table > .header{
-  margin-bottom:25px;
-}
-.p-table > .header > h4{
-  text-transform:uppercase;
-  font-weight:bold;
-  font-size:26px;
-  letter-spacing:2px;
-  margin:0;
-  margin-bottom:45px;
-}
-.p-table > .header > .price{
-  position:relative;
-  height:96px;
-  line-height:96px;
-}
-.p-table > .header > .price > span{
-  display:inline-block;
-  *display:inline;
-  *zoom:1;
-  position:relative;
-}
-.p-table > .header > .price > .currency{
-  vertical-align:top;
-  top:-22px;
-  font-size:16px;
-}
-.p-table > .header > .price > .amount{
-  font-size:84px;
-  font-weight:bold;
-}
-.p-table > .header > .price > .period{
-  vertical-align:baseline;
-  color:#727272;
-  color:rgba(0,0,0,.45);
-  top:-4px;
-  letter-spacing:2px;
-  font-size:12px;
-  text-transform:uppercase;
-}
-.p-table > .items{
-  margin:0;
-  padding:0;
-  list-style:none;
-  margin-bottom:35px;
-}
-.p-table > .items > li{
-  padding:7px 0;
-  color:rgba(0,0,0,.45);
-  font-weight:500;
+.clearfix:after {
+  clear: both;
 }

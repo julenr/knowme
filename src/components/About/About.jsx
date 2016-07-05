@@ -28,12 +28,10 @@ class About extends React.Component {
     const {aboutTitle, aboutIntro} = this.props.About;
     return (
       <section id="about" className="section about-section active">
-        <div className="container-fluid">
-          <div className="block about-block">
-            <div className="section-header">
-              <h2>{aboutTitle}</h2>
-              <p>{aboutIntro}</p>
-            </div>
+        <div className="about-flex-container">
+          <div className="section-header">
+            <h1>{aboutTitle}</h1>
+            <p>{aboutIntro}</p>
           </div>
         </div>
       </section>

@@ -26,14 +26,15 @@ function mapStateToProps(state) {
 
 class Portfolio extends React.Component {
   render () {
-    const {portfolioTitle, projects} = this.props.Portfolio;
+    const {portfolioTitle,  projects} = this.props.Portfolio;
     return (
       <section id="portfolio" className="section portfolio-section active">
         <div className="portfolio-flex-container">
           <div className="section-header">
-            <h2>{portfolioTitle}</h2>
+            <h1>{portfolioTitle}</h1>
           </div>
           <section id="grid" className="grid clearfix">
+            <h4>{projects.sectionTitle}</h4>
             {
               projects.collection.map((prj, idx) => <PortfolioProjectItem {...prj} key={idx}/>)
             }
@@ -79,9 +80,7 @@ class PortfolioProjectItem extends React.Component {
   }
 }
 
-
 export default connect(
   mapStateToProps, {
-
   }
 )(Portfolio);

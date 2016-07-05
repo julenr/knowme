@@ -31,27 +31,32 @@ class Contact extends React.Component {
       <section id="contact" className="section contact-section active">
         <div className="contact-flex-container" >
           <div className="section-header">
-            <h2>Get in touch and let's start something great together</h2>
+            <h2>Contact</h2>
+            <h4>Get in touch and let's start something great together</h4>
           </div>
           <div className="contact-info-icons">
             <div className="contact-phone">
               <a href={`tel:${telephone}`} alt={telephonetxt} title={telephonetxt}>
                 <i className="ion-iphone"/>
+                PHONE
               </a>
             </div>
             <div className="contact-mail">
               <a href={`mailto:${mail}`} alt={mail} title={mail}>
                 <i className="ion-android-mail"/>
+                EMAIL
               </a>
             </div>
             <div className="contact-linkedin">
               <a href={linkedin} alt={linkedin} title={linkedin}>
                 <i className="ion-social-linkedin"/>
+                LINKEDIN
               </a>
             </div>
             <div className="contact-github">
               <a href={github} alt={github} title={github}>
                 <i className="ion-social-github"/>
+                GITHUB
               </a>
             </div>
           </div>
