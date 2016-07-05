@@ -4,6 +4,24 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  .section-header {
+    flex: 1;
+    max-width: 550px;
+    text-align: center;
+    h1 {
+      font-weight: bold;
+      font-size: 4rem;
+      line-height: 1.4em;
+      margin: 0;
+      letter-spacing: 2px;
+      color: #AAA;
+    }
+    p {
+      font-size: 1.2rem;
+      color:#009688;
+      font-weight:300;
+    }
+  }
 }
 
 *, *:after, *:before { box-sizing: border-box; }

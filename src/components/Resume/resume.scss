@@ -1,6 +1,36 @@
 /*=================================================================================
 	Resume Section
 =================================================================================*/
+.resume-flex-container {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .section-header {
+    flex: 1;
+    max-width: 550px;
+    text-align: center;
+    h1 {
+      font-weight: bold;
+      font-size: 4rem;
+      line-height: 1.4em;
+      margin: 0;
+      letter-spacing: 2px;
+      color: #AAA;
+    }
+    p {
+      font-size: 1.2rem;
+      color:#009688;
+      font-weight:300;
+    }
+  }
+}
+
+
+
+
 .experience-block{
   padding-top:100px;
 }
@@ -76,73 +106,4 @@
   font-weight:500;
 }
 
-/*== Testimonials Block ==*/
-.testimonials-block{
-  padding-top:100px;
-}
-.testimonial{
-  position:relative;
-}
-.testimonial > .icon{
-  font-size:70px;
-  color:#009688;
-  position:absolute;
-  top:0;
-  left:0;
-  z-index:9;
-}
-.testimonial > .content{
-  margin:15px;
-  margin-left:35px;
-  padding:20px;
-  padding-left:35px;
-  font-size:14px;
-  background:#FFF;
-  box-shadow:0 2px 6px 0 rgba(0,0,0,.2);
-  position:relative;
-}
-.testimonial > .content > p{
-  margin:0;
-}
-.testimonial > .content > .author-info{
-  margin-top:25px;
-}
-.testimonial > .content > .author-info > h4{
-  text-transform:uppercase;
-  font-weight:bold;
-  letter-spacing:2px;
-  margin:0;
-  font-size:16px;
-}
-.testimonial > .content > .author-info > span{
-  font-weight:500;
-  color:rgba(0,0,0,.45);
-  font-size:12px;
-}
-.owl-controls{
-  margin-top:40px;
-}
-.owl-dots{
-  font-size:0;
-}
-.owl-dots > .owl-dot{
-  display:inline-block;
-  *display:inline;
-  *zoom:1;
-  margin-right:10px;
-}
-.owl-dots > .owl-dot > span{
-  display:block;
-  height:8px;
-  width:44px;
-  background:#FAFAFA;
-  -webkit-transition:all .3s ease;
-  -moz-transition:all .3s ease;
-  transition:all .3s ease;
-  -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
-  -moz-box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
-}
-.owl-dots > .owl-dot.active > span{
-  background:#009688;
-}
+

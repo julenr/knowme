@@ -31,8 +31,8 @@ class Contact extends React.Component {
       <section id="contact" className="section contact-section active">
         <div className="contact-flex-container" >
           <div className="section-header">
-            <h2>Contact</h2>
-            <h4>Get in touch and let's start something great together</h4>
+            <h1>Contact</h1>
+            <p>Get in touch and let's start something great together</p>
           </div>
           <div className="contact-info-icons">
             <div className="contact-phone">

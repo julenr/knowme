@@ -25,10 +25,14 @@ function mapStateToProps(state) {
 
 class Resume extends React.Component {
   render () {
-    const {experience, education} = this.props.Resume;
+    const {resumeTitle, experience, education} = this.props.Resume;
     return (
         <section id="resume" className="section resume-section active" >
-            <div className="container-fluid" >
+          <div className="resume-flex-container">
+            <div className="section-header">
+              <h1>{resumeTitle}</h1>
+            </div>
+
               <div className="block timeline-block" >
                 <div className="section-header" >
                   <h2>{education.title}</h2>

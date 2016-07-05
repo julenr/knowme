@@ -32,9 +32,9 @@ class Portfolio extends React.Component {
         <div className="portfolio-flex-container">
           <div className="section-header">
             <h1>{portfolioTitle}</h1>
+            <p>{projects.sectionTitle}</p>
           </div>
           <section id="grid" className="grid clearfix">
-            <h4>{projects.sectionTitle}</h4>
             {
               projects.collection.map((prj, idx) => <PortfolioProjectItem {...prj} key={idx}/>)
             }
@@ -65,7 +65,7 @@ class PortfolioProjectItem extends React.Component {
          onMouseLeave={ () => this.snapPath.animate( { 'path' : this.pathConfig.from }, speed, easing ) }
       >
         <figure>
-          <img src={require(`../../assets/images/${images.root}-01-sm.png`)} width="180" height="320" />
+          <img src={require(`../../assets/images/${images.root}-01-sm.png`)} />
           <svg viewBox="0 0 180 320" preserveAspectRatio="none">
             <path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z "/>
           </svg>

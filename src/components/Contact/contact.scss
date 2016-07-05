@@ -7,9 +7,20 @@
 
   .section-header {
     flex: 1;
-    h2 {
+    max-width: 550px;
+    text-align: center;
+    h1 {
+      font-weight: bold;
       font-size: 4rem;
-      text-align: center;
+      line-height: 1.4em;
+      margin: 0;
+      letter-spacing: 2px;
+      color: #AAA;
+    }
+    p {
+      font-size: 1.2rem;
+      color:#009688;
+      font-weight:300;
     }
   }
 

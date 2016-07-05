@@ -31,7 +31,9 @@ class About extends React.Component {
         <div className="about-flex-container">
           <div className="section-header">
             <h1>{aboutTitle}</h1>
-            <p>{aboutIntro}</p>
+            {
+              aboutIntro.map((paragraph) => <div><p>{paragraph}</p></div>)
+            }
           </div>
         </div>
       </section>

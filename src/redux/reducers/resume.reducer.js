@@ -1,5 +1,6 @@
 
 const initialState = {
+  resumeTitle: 'Resume',
     education: {
       title: 'My Experience',
       description: 'Take a look at the places where I\'ve worked',
