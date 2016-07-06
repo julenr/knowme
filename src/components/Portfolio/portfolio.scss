@@ -1,3 +1,6 @@
+$materialGreenColor_1: #009688;
+$mediumGrayColor_1: #AAA;
+
 .portfolio-flex-container {
   height: auto;
   display: flex;
@@ -6,7 +9,7 @@
   align-items: center;
   .section-header {
     flex: 1;
-    max-width: 550px;
+    max-width: 1000px;
     text-align: center;
     h1 {
       font-weight: bold;
@@ -14,11 +17,11 @@
       line-height: 1.4em;
       margin: 0;
       letter-spacing: 2px;
-      color: #AAA;
+      color: $mediumGrayColor_1;
     }
     p {
-      font-size: 1.2rem;
-      color:#009688;
+      font-size: 1.6rem;
+      color:$materialGreenColor_1;
       font-weight:300;
     }
   }
@@ -150,7 +153,7 @@
 /* Individual styles */
 
 .grid figure button {
-  top: 50%;
+  top: 42%;
   left: 50%;
   border: 3px solid #fff;
   background: transparent;

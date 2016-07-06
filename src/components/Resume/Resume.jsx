@@ -33,26 +33,25 @@ class Resume extends React.Component {
               <h1>{resumeTitle}</h1>
             </div>
 
-              <div className="block timeline-block" >
-                <div className="section-header" >
-                  <h2>{education.title}</h2>
-                  <p>{education.descripcion}</p>
-                </div>
-                <ul className="timeline" >
-                  {education.institutions.map(this.renderEducation)}
-                </ul>
-              </div>
-              <div className="block timeline-block experience-block" >
-                <div className="section-header" >
-                  <h2>{experience.title}</h2>
-                  <p>{experience.descripcion}</p>
-                </div>
-                <ul className="timeline" >
-                  {experience.companies.map(this.renderExperience)}
-                </ul>
-              </div>
 
+
+            <div className="resume-section" >
+              <h2>{experience.title}</h2>
+              <p>{experience.descripcion}</p>
+              <ul className="timeline" >
+                {experience.companies.map(this.renderExperience)}
+              </ul>
             </div>
+
+            <div className="resume-section" >
+              <h2>{education.title}</h2>
+              <p>{education.descripcion}</p>
+              <ul className="timeline" >
+                {education.institutions.map(this.renderEducation)}
+              </ul>
+            </div>
+
+          </div>
         </section>
     )
   }
@@ -74,9 +73,8 @@ class Resume extends React.Component {
       <li key={idx}>
         <div className="timeline-content" >
           <h4>As&nbsp;{job.title}&nbsp;at&nbsp;{job.company}</h4>
-          <span>{job.date}&nbsp;{job.place}</span>
-          <p>{job.description}
-          </p>
+          <span>{job.date}&nbsp;|&nbsp;{job.place}</span>
+          <p>{job.description}</p>
         </div>
       </li>
     );

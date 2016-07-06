@@ -1,9 +1,9 @@
 
 const initialState = {
-  aboutTitle: 'About',
+  aboutTitle: 'me',
   aboutIntro: [
     `
-    I’m Julen Rojo, a Spanish Creative Full Stack Developer and UI/UX Designer based in Windy Wellington, New Zealand.
+    I’m Julen Rojo, a Spanish Creative Full Stack Developer and UI Designer based in Windy Wellington, New Zealand.
     I passionately move pixels and lines of code to craft clean, responsive,
     and user-friendly websites. My current weapons of choice are JavaScript, React, Angular and Node.
     `

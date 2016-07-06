@@ -37,8 +37,6 @@ img{
   right:65px;
   bottom:65px;
   background:#FFF;
-  -webkit-box-shadow: 0 0 60px 0 rgba(0,0,0,.18);
-  -moz-box-shadow: 0 0 60px 0 rgba(0,0,0,.18);
   box-shadow: 0 0 60px 0 rgba(0,0,0,.18);
 }
 .section{
@@ -50,14 +48,13 @@ img{
   transition:all .3s ease;
   overflow-y:auto;
   overflow-x:hidden;
-  padding:100px;
-  padding-bottom:0;
+  padding:60px 100px 0 100px;
 }
-.section:after{
-  content: ' ';
-  display:block;
-  height:100px;
-}
+//.section:after{
+//  content: ' ';
+//  display:block;
+//  height:100px;
+//}
 span.show-menu .section.active,
 .section{
   opacity:0;
@@ -180,12 +177,14 @@ a.btn-material{
 // SVG BUTTONS
 .svg-wrapper {
   height: 60px;
-  margin: 0 auto;
-  position: relative;
+  //margin: 0 auto;
+  //position: relative;
   top: 50%;
   transform: translateY(-50%);
   width: 320px;
   text-align: center;
+  //background-color: lightblue;
+  float: left;
 }
 
 .shape {

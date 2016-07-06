@@ -31,9 +31,20 @@ const initialState = {
         description: '',
         year: '2008',
         techs: ['JavaScript', 'PHP', 'HTML', 'CSS', 'MYSQL'],
-        url: 'http://www.escuvin.es',
+        url: 'http://www.escuvin.com',
         images: {
           root: 'escuvin',
+          number: 1
+        }
+      },
+      {
+        title: 'FotonHC',
+        description: '',
+        year: '2007',
+        techs: ['JavaScript', 'Flash', 'HTML', 'CSS', 'MYSQL'],
+        url : 'http://www.fotonhc.com/',
+        images: {
+          root: 'fotonhc',
           number: 1
         }
       },
@@ -45,7 +56,8 @@ const initialState = {
         url : 'http://www.cieautomotive.com',
         images: {
           root: 'cieautomotive',
-          number: 1
+          number: 1,
+          format: 'gif'
         }
       },
       {
@@ -67,6 +79,17 @@ const initialState = {
         url : 'http://www.bilbu.es',
         images: {
           root: 'bilbu',
+          number: 1
+        }
+      },
+      {
+        title: 'IDELT',
+        description: '',
+        year: '2005',
+        techs: ['JavaScript', 'PHP', 'HTML', 'CSS', 'MYSQL'],
+        url : 'http://www.idelt.com',
+        images: {
+          root: 'idelt',
           number: 1
         }
       }

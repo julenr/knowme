@@ -35,30 +35,37 @@ class Contact extends React.Component {
             <p>Get in touch and let's start something great together</p>
           </div>
           <div className="contact-info-icons">
-            <div className="contact-phone">
+            <div className="contact-item">
               <a href={`tel:${telephone}`} alt={telephonetxt} title={telephonetxt}>
                 <i className="ion-iphone"/>
-                PHONE
+                <div>PHONE</div>
+                <div className="text-info">+64 223 515 860</div>
               </a>
             </div>
-            <div className="contact-mail">
+            <div className="contact-item">
               <a href={`mailto:${mail}`} alt={mail} title={mail}>
                 <i className="ion-android-mail"/>
-                EMAIL
+                <div>EMAIL</div>
+                <div className="text-info">julen.wellington@gmail.com</div>
               </a>
             </div>
-            <div className="contact-linkedin">
+            <div className="contact-item">
               <a href={linkedin} alt={linkedin} title={linkedin}>
                 <i className="ion-social-linkedin"/>
-                LINKEDIN
+                <div>LINKEDIN</div>
+                <div className="text-info">www.linkedin.com/in/julenrojo</div>
               </a>
             </div>
-            <div className="contact-github">
+            <div className="contact-item">
               <a href={github} alt={github} title={github}>
                 <i className="ion-social-github"/>
-                GITHUB
+                <div>GITHUB</div>
+                <div className="text-info">github.com/julenr</div>
               </a>
             </div>
+          </div>
+          <div className="centering-purpose">
+            &nbsp;
           </div>
         </div>
       </section>
