@@ -33,6 +33,7 @@ class Home extends React.Component {
           <div className="flex-avatar">
             <div className="avatar" />
           </div>
+
           <div className="text-col-main">
             <div className="intro-text-col">
               <div className="inner">
@@ -40,19 +41,24 @@ class Home extends React.Component {
                   <h1>{introTitle}</h1>
                   <span>{introSubTitle}</span>
                   <p>{cites[0]}</p>
-                  <div className="intro-btns" >
-                    <Link to="/contact" className="btn-material" data-section="contact" onClick={() => props.menuButtonClick()}>
-                      {hireMe}
-                    </Link>
-                    <a href={require('../../assets/rojojulenresume.pdf')} download>
-                      <div className="svg-wrapper">
-                        <svg height="60" width="320">
-                          <rect className="shape" height="60" width="320" />
-                        </svg>
-                        <div className="text">{downloadResume}</div>
-                      </div>
-                    </a>
-                  </div>
+                </div>
+                <div className="intro-btns" >
+                  <Link to="/contact" onClick={() => props.menuButtonClick()}>
+                    <div className="svg-wrapper">
+                      <svg height="60" width="320">
+                        <rect className="shape" height="60" width="320" />
+                      </svg>
+                      <div className="text">{hireMe}</div>
+                    </div>
+                  </Link>
+                  <a href={require('../../assets/rojojulenresume.pdf')} download>
+                    <div className="svg-wrapper">
+                      <svg height="60" width="320">
+                        <rect className="shape" height="60" width="320" />
+                      </svg>
+                      <div className="text">{downloadResume}</div>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>

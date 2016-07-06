@@ -5,15 +5,9 @@
     <% if (htmlWebpackPlugin.files.favicon) { %>
     <link rel="shortcut icon" href="<%= htmlWebpackPlugin.files.favicon %>">
     <% } %>
-    <% if (htmlWebpackPlugin.options.mobile) { %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <% } %>
-    <% for (var css in htmlWebpackPlugin.files.css) { %>
-    <link href="<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">
-    <% } %>
 </head>
 <body>
-<% if (htmlWebpackPlugin.options.unsupportedBrowser) { %>
 <div id='noscript'>
     <div class="message" id="javascript-disabled">
         <div class="page-wrapper">
@@ -31,15 +25,6 @@
     </div>
 </div>
 <![endif]-->
-<% } %>
-
-<% if (htmlWebpackPlugin.options.window) { %>
-<script>
-    <% for (var varName in htmlWebpackPlugin.options.window) { %>
-    window['<%=varName%>'] = <%= JSON.stringify(htmlWebpackPlugin.options.window[varName]) %>;
-    <% } %>
-</script>
-<% } %>
 
 </body>
 </html>

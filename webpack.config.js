@@ -137,7 +137,8 @@ if(TARGET === 'build') {
     module: {
       loaders: [
         { test: /\.jsx?$/, loaders: ['babel'], include: PATHS.app },
-        { test: /\.scss$/, loader: ExtractTextPlugin.extract('style', 'css!postcss-loader!sass') }
+        { test: /\.css$/, loaders: ['style', 'css']},
+        { test: /\.scss$/, loader: ExtractTextPlugin.extract('style', 'css!postcss-loader!sass'), include: PATHS.app }
       ]
     },
     postcss: function () {
@@ -162,7 +163,7 @@ if(TARGET === 'build') {
         '__DEV__': JSON.stringify(JSON.parse('false'))
       }),
       new HtmlwebpackPlugin({
-        inject: false,
+        inject: true,
         template: './templates/index.production.ejs',
         title: APP_TITLE
       }),
@@ -170,7 +171,10 @@ if(TARGET === 'build') {
         compress: {
           warnings: false
         }
-      })
+      }),
+      new CopyWebpackPlugin([
+        { from: PATHS.app + '/assets/images', to: './assets/images' }
+      ])
     ]
   });
 }

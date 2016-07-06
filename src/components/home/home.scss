@@ -48,11 +48,12 @@
   padding-left:0;
 }
 .intro-text > h1{
-  font-weight:bold;
-  font-size:50px;
-  line-height:1.4em;
-  margin:0;
-  letter-spacing:2px;
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 1.4em;
+  margin: 0;
+  letter-spacing: 2px;
+  color: #AAA;
 }
 .intro-text > span{
   font-size:1.5em;
@@ -69,11 +70,8 @@
   margin-top:35px;
   line-height:1.7em;
 }
-.intro-text > .intro-btns{
+.intro-btns{
   margin-top:35px;
-}
-.intro-text > .intro-btns > .btn-material{
-  margin-right:15px;
 }
 
 @media(max-width:1024px){
