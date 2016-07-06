@@ -32,7 +32,7 @@ class About extends React.Component {
           <div className="section-header">
             <h1>{aboutTitle}</h1>
             {
-              aboutIntro.map((paragraph) => <div><p>{paragraph}</p></div>)
+              aboutIntro.map((paragraph, idx) => <div key={idx}><p>{paragraph}</p></div>)
             }
           </div>
         </div>

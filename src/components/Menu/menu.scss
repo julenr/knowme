@@ -19,90 +19,114 @@ span.show-menu .menu{
   opacity:1;
   visibility:visible;
 }
-.menu-items{
+span.show-menu .menu-items > ul > li > a{
+  opacity:1;
+  transform:translateY(0px);
+}
+
+.menu-items {
   position:absolute;
   top:50%;
   width:100%;
   text-align:center;
   transform:translate3d(0, -50%, 0);
   z-index:99;
+  > ul {
+    list-style:none;
+    padding:0;
+    margin:0;
+    > li {
+      display:inline-block;
+      *display:inline;
+      *zoom:1;
+      margin:20px;
+      > a {
+        display:block;
+        text-decoration:none;
+        color:#202020;
+        opacity:0;
+        transition:all .3s ease;
+        transform:translateY(15px);
+        > i {
+          display:block;
+          height:100px;
+          width:100px;
+          line-height:100px;
+          font-size:38px;
+          vertical-align:middle;
+          background:#F0F0F0;
+          transition:all .3s ease;
+          border-radius:50%;
+        }
+        > i:before {
+          line-height:100px;
+          vertical-align:middle;
+        }
+        > span {
+          font-weight:bold;
+          text-transform:uppercase;
+          letter-spacing:2px;
+          font-size:14px;
+          margin-top:12px;
+          display:block;
+          color:#B6B6B6;
+          position:relative;
+          z-index:9;
+          transition:all .3s ease;
+        }
+      }
+      > a:hover {
+        > i {
+          box-shadow: 0 10px 40px 0 rgba(0,0,0,.18);
+          background:#009688;
+          color:#FFF;
+        }
+        > span{
+          color:#202020;
+        }
+      }
+    }
+  }
 }
-.menu-items > ul{
-  list-style:none;
-  padding:0;
-  margin:0;
+@media (min-width: 600px) {
+  .menu-items > ul > li {
+    margin:28px;
+    > a {
+      > i {
+        height:130px;
+        width:130px;
+        line-height:130px;
+        font-size:58px;
+      }
+      > i:before {
+        line-height: 130px;
+      }
+    }
+  }
 }
-.menu-items > ul > li{
-  display:inline-block;
-  *display:inline;
-  *zoom:1;
-  margin:28px;
+
+
+span.show-menu .menu-items > ul {
+  > li:nth-of-type(1) > a{
+    transition-delay:.4s;
+  }
+  > li:nth-of-type(2) > a{
+    transition-delay:.5s;
+  }
+  > li:nth-of-type(3) > a{
+    transition-delay:.6s;
+  }
+  > li:nth-of-type(4) > a{
+    transition-delay:.7s;
+  }
+  > li:nth-of-type(5) > a{
+    transition-delay:.8s;
+  }
+  > li:nth-of-type(6) > a{
+    transition-delay:.9s;
+  }
+  > li:nth-of-type(7) > a{
+    transition-delay:1s;
+  }
 }
-.menu-items > ul > li > a{
-  display:block;
-  text-decoration:none;
-  color:#202020;
-  opacity:0;
-  transition:all .3s ease;
-  transform:translateY(15px);
-}
-span.show-menu .menu-items > ul > li > a{
-  opacity:1;
-  transform:translateY(0px);
-}
-.menu-items > ul > li > a > i{
-  display:block;
-  height:130px;
-  width:130px;
-  line-height:130px;
-  font-size:58px;
-  vertical-align:middle;
-  background:#F0F0F0;
-  transition:all .3s ease;
-  border-radius:50%;
-}
-.menu-items > ul > li > a > i:before{
-  line-height:130px;
-  vertical-align:middle;
-}
-.menu-items > ul > li > a > span{
-  font-weight:bold;
-  text-transform:uppercase;
-  letter-spacing:2px;
-  font-size:14px;
-  margin-top:12px;
-  display:block;
-  color:#B6B6B6;
-  position:relative;
-  z-index:9;
-  transition:all .3s ease;
-}
-.menu-items > ul > li > a:hover > i{
-  box-shadow: 0 10px 40px 0 rgba(0,0,0,.18);
-  background:#009688;
-  color:#FFF;
-}
-.menu-items > ul > li > a:hover > span{
-  color:#202020;
-}
-span.show-menu .menu-items > ul > li:nth-of-type(1) > a{
-  transition-delay:.4s;
-}
-span.show-menu .menu-items > ul > li:nth-of-type(2) > a{
-  transition-delay:.5s;
-}
-span.show-menu .menu-items > ul > li:nth-of-type(3) > a{
-  transition-delay:.6s;
-}
-span.show-menu .menu-items > ul > li:nth-of-type(4) > a{
-  transition-delay:.7s;
-}
-span.show-menu .menu-items > ul > li:nth-of-type(5) > a{
-  transition-delay:.8s;
-}
-span.show-menu .menu-items > ul > li:nth-of-type(6) > a{
-  transition-delay:.9s;
-}
-span.show-menu .menu-items > ul > li:nth-of-type(7) > a{
-  transition-delay:1s;
-}
+

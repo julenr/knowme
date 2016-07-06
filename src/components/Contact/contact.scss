@@ -27,11 +27,13 @@
     flex: 2;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     .contact-item {
       text-align: center;
-      padding-right: 30px;
+      margin-right: 20px;
+      //border: solid 1px;
     }
     a, a:hover, a:visited, a:active {
       color: inherit;
@@ -47,6 +49,13 @@
         font-weight: 300;
       }
     }
+  }
+
+  .contact-info-icons:after {
+    content: ' ';
+    display:block;
+    height:120px;
+    width: 100%;
   }
 
   .centering-purpose {

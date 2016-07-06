@@ -18,9 +18,20 @@
       color: #AAA;
     }
     p {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       color:#009688;
       font-weight:300;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .about-flex-container {
+    .section-header {
+      font-size: 3rem;
+      p {
+        font-size:1.4rem;
+      }
     }
   }
 }

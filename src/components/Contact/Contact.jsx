@@ -50,17 +50,17 @@ class Contact extends React.Component {
               </a>
             </div>
             <div className="contact-item">
-              <a href={linkedin} alt={linkedin} title={linkedin}>
-                <i className="ion-social-linkedin"/>
-                <div>LINKEDIN</div>
-                <div className="text-info">www.linkedin.com/in/julenrojo</div>
-              </a>
-            </div>
-            <div className="contact-item">
               <a href={github} alt={github} title={github}>
                 <i className="ion-social-github"/>
                 <div>GITHUB</div>
                 <div className="text-info">github.com/julenr</div>
+              </a>
+            </div>
+            <div className="contact-item">
+              <a href={linkedin} alt={linkedin} title={linkedin}>
+                <i className="ion-social-linkedin"/>
+                <div>LINKEDIN</div>
+                <div className="text-info">www.linkedin.com/in/julenrojo</div>
               </a>
             </div>
           </div>

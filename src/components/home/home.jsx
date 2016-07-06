@@ -33,28 +33,27 @@ class Home extends React.Component {
           <div className="flex-avatar">
             <div className="avatar" />
           </div>
-
           <div className="text-col-main">
             <div className="intro-text-col">
               <div className="inner">
                 <div className="intro-text">
                   <h1>{introTitle}</h1>
-                  <span>{introSubTitle}</span>
+                  <h2>{introSubTitle}</h2>
                   <p>{cites[0]}</p>
                 </div>
                 <div className="intro-btns" >
                   <Link to="/contact" onClick={() => props.menuButtonClick()}>
                     <div className="svg-wrapper">
-                      <svg height="60" width="320">
-                        <rect className="shape" height="60" width="320" />
+                      <svg height="60" width="240">
+                        <rect className="shape" height="60" width="240" />
                       </svg>
                       <div className="text">{hireMe}</div>
                     </div>
                   </Link>
                   <a href={require('../../assets/rojojulenresume.pdf')} download>
                     <div className="svg-wrapper">
-                      <svg height="60" width="320">
-                        <rect className="shape" height="60" width="320" />
+                      <svg height="60" width="240">
+                        <rect className="shape" height="60" width="240" />
                       </svg>
                       <div className="text">{downloadResume}</div>
                     </div>
@@ -62,6 +61,7 @@ class Home extends React.Component {
                 </div>
               </div>
             </div>
+            <br /><br />
           </div>
         </div>
       </section>
