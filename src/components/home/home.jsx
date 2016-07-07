@@ -42,14 +42,6 @@ class Home extends React.Component {
                   <p>{cites[0]}</p>
                 </div>
                 <div className="intro-btns" >
-                  <Link to="/contact" onClick={() => props.menuButtonClick()}>
-                    <div className="svg-wrapper">
-                      <svg height="60" width="240">
-                        <rect className="shape" height="60" width="240" />
-                      </svg>
-                      <div className="text">{hireMe}</div>
-                    </div>
-                  </Link>
                   <a href={require('../../assets/rojojulenresume.pdf')} download>
                     <div className="svg-wrapper">
                       <svg height="60" width="240">
@@ -58,10 +50,18 @@ class Home extends React.Component {
                       <div className="text">{downloadResume}</div>
                     </div>
                   </a>
+                  <Link to="/contact" onClick={() => props.menuButtonClick()}>
+                    <div className="svg-wrapper">
+                      <svg height="60" width="240">
+                        <rect className="shape" height="60" width="240" />
+                      </svg>
+                      <div className="text">{hireMe}</div>
+                    </div>
+                  </Link>
                 </div>
+                <br /><br />
               </div>
             </div>
-            <br /><br />
           </div>
         </div>
       </section>
