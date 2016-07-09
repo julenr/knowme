@@ -27,6 +27,7 @@ const pkg = require('./package.json');
 const TARGET = process.env.npm_lifecycle_event;
 const PATHS = {
   app: path.join(__dirname, 'src'),
+  imagesAssets: path.join(__dirname, 'src/assets'),
   build: path.join(__dirname, 'build'),
   develop: path.join(__dirname, 'build-develop'),
   test: path.join(__dirname, 'src')
@@ -47,22 +48,23 @@ const common = {
   module: {
     loaders: [
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(png|jpg|gif|svg)$/,
         loaders: ['url-loader?limit=70000&name=assets/images/[name].[ext]'],
-        include: PATHS.app
+        include: PATHS.imagesAssets
       },
       {
-        test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        test: /\.(ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         loader: 'file-loader?name=assets/fonts/[name].[ext]'
       },
       {
         test: /\.(woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'url-loader?limit=30000&name=assets/fonts/[name].[ext]'
+        loader: 'url-loader?limit=70000&name=assets/fonts/[name].[ext]'
       },
       { test: /\.html$/, loader: 'raw', include: PATHS.app },
       {
         test: /\.pdf(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'file-loader?minetype=application/pdf&name=[name].pdf'
+        loader: 'file-loader?minetype=application/pdf&name=[name].pdf',
+        include: PATHS.app
       }
     ],
     preLoaders: [
