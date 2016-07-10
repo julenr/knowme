@@ -1,0 +1,128 @@
+//
+//
+//              Created by
+//            __ _____ __    _____ _____    _____ _____    __ _____
+//         __|  |  |  |  |  |   __|   | |  | __  |     |__|  |     |
+//        |  |  |  |  |  |__|   __| | | |  |    -|  |  |  |  |  |  |
+//        |_____|_____|_____|_____|_|___|  |__|__|_____|_____|_____|
+//
+//                on 03/05/2016
+//                   isusk246@gmail.com
+//
+//
+/*
+	General purpose functions and mixins
+*/
+
+
+/* -------------------------------------
+   FUNCTIONS
+   -------------------------------------
+*/
+/* Convert pixels to ems, passing pixels in only */
+@function em($px, $context: 16, $basesize: 16) {
+    @return (($px/$basesize)/($context/16))+em;
+}
+/* Generate a line height without any rounding errors
+   (for Firefox & Chrome), passing pixels in only */
+@function lh($lineheight_in_pixels, $fontsize_in_pixels: 16) {
+    @return (round($lineheight_in_pixels)/$fontsize_in_pixels);
+}
+/* Tint colour */
+@function tint($color, $amount: 50%) {
+  @if $color == transparent { $color: rgba(white, 0); }
+  @return mix($color, white, $amount);
+}
+/* Shade colour */
+@function shade($color, $amount: 50%) {
+  @if $color == transparent { $color: rgba(white, 0); }
+  @return mix($color, black, $amount);
+}
+
+
+/* -------------------------------------
+   MIXINS
+   -------------------------------------
+*/
+@mixin gradient($startcolour, $endcolour) {
+  background: $endcolour;
+  background: linear-gradient(to bottom,  $startcolour 0%,$endcolour 100%);
+}
+@mixin gradient-left-right($startcolour, $endcolour) {
+  background: $endcolour;
+  background: linear-gradient(to right, $startcolour 0%,$endcolour 100%); /* W3C */
+}
+@mixin box-shadow($h, $v, $blur, $radius, $color) {
+  box-shadow:$h $v $blur $radius $color;
+}
+@mixin box-shadow-inset($h, $v, $blur, $radius, $color) {
+  box-shadow:$h $v $blur $radius $color inset;
+}
+@mixin text-shadow($h, $v, $blur, $color) {
+  text-shadow: $h $v $blur $color;
+}
+@mixin box-sizing($type: border-box) {
+  box-sizing: border-box;
+}
+@mixin border-radius($radius) {
+  border-radius:$radius;
+}
+@mixin background-size($coverage) {
+  background-size:$coverage;
+}
+@mixin border-radius-separate($topLeftRadius: 5px, $topRightRadius: 5px, $bottomLeftRadius: 5px, $bottomRightRadius: 5px) {
+  border-top-left-radius: $topLeftRadius;
+  border-top-right-radius: $topRightRadius;
+  border-bottom-right-radius: $bottomRightRadius;
+  border-bottom-left-radius: $bottomLeftRadius;
+}
+@mixin transition($scope: all, $time: .2s, $ease:ease-in-out, $delay:0s) {
+  transition:$scope $time $ease $delay;
+}
+@mixin appearance($type:none) {
+  appearance:$type;
+}
+@mixin filter($type:grayscale, $amount:100%) {
+  filter: $type($amount);
+}
+@mixin box-sizing($type:border-box) {
+  box-sizing: $type;
+}
+@mixin transform-translate($x:0, $y:0) {
+  transform: translate($x, $y);
+}
+@mixin transform-translate3d($x:0, $y:0, $z:0) {
+  transform: translate3d($x, $y, $z);
+}
+@mixin transform-perspective($amount:1000px) {
+  transform:perspective($amount);
+}
+@mixin transform-style($type:preserve-3d) {
+  transform-style:$type;
+}
+@mixin backface-visibility($visibility:hidden) {
+  backface-visibility:$visibility;
+}
+@mixin transform-rotateY($degrees:0deg) {
+  transform:rotateY($degrees);
+}
+@mixin transform-rotate($degrees:0deg) {
+  transform:rotate($degrees);
+}
+@mixin animation ($str) {
+  animation:$str;
+}
+@mixin keyframe ($animation_name) {
+  @-webkit-keyframes #{$animation_name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation_name} {
+    @content;
+  }
+  @-o-keyframes #{$animation_name} {
+    @content;
+  }
+  @keyframes #{$animation_name} {
+    @content;
+  }
+}
