@@ -1,4 +1,7 @@
-.about-flex-container {
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.about__flex-container {
   height: auto;
   display: flex;
   flex-direction: column;
