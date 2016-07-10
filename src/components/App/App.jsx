@@ -39,7 +39,7 @@ class App extends React.Component {
         <div className="main-content">
           <MenuButton {...this.props}/>
           <Menu {...this.props}/>
-          {this.props.children || 'Welcome to Careers NZ'}
+          {this.props.children || 'Welcome to My Web site'}
         </div>
       </span>
     );

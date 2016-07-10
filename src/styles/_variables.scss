@@ -17,38 +17,40 @@
 */
 
 
+$material_green_1: #009688;
+
 /* Gray */
-$acc_body: #474747;
-$acc_gray_1: #f0eee7; /* Page background light gray (*) */
-$acc_beige_1: #dbd9d0; /* Page background light beige */
-$acc_gray_2: #a3a3a3; /* Mid gray */
-$acc_gray_3: #bebebe; /* Lighter mid gray */
-$acc_gray_4: #acaaa7; /* Another mid gray */
-$acc_gray_5: #ebebeb; /* Lightest gray */
-$acc_gray_6: #696969; /* Another darker mid gray */
-$acc_gray_7: #8f8f8f; /* Another darker mid gray */
-$acc_gray_8: #434240; /* Darker gray */
-$acc_gray_9: #252525; /* ANother darker gray */
+$app_body: #474747;
+$app_gray_1: #f0eee7; /* Page background light gray (*) */
+$app_beige_1: #dbd9d0; /* Page background light beige */
+$app_gray_2: #a3a3a3; /* Mid gray */
+$app_gray_3: #bebebe; /* Lighter mid gray */
+$app_gray_4: #acaaa7; /* Another mid gray */
+$app_gray_5: #ebebeb; /* Lightest gray */
+$app_gray_6: #696969; /* Another darker mid gray */
+$app_gray_7: #8f8f8f; /* Another darker mid gray */
+$app_gray_8: #434240; /* Darker gray */
+$app_gray_9: #252525; /* ANother darker gray */
 
 /* Green */
-$acc_green_1: #2ba94f; /* Primary green */
-$acc_green_2: #17983c; /* Darker green (text) */
-$acc_green_3: #89c826; /* Bright green */
-$acc_green_4: #304b0f; /* Dark green (text) */
-$acc_green_5: #95d4a7; /* Pale light green */
+$app_green_1: #2ba94f; /* Primary green */
+$app_green_2: #17983c; /* Darker green (text) */
+$app_green_3: #89c826; /* Bright green */
+$app_green_4: #304b0f; /* Dark green (text) */
+$app_green_5: #95d4a7; /* Pale light green */
 
 /* Blue */
-$acc_blue_1: rgb(0, 94, 157); /* Primary blue */
-$acc_blue_2: #0295cb; /* Darker blue */
-$acc_blue_3: #01b9ee; /* Light blue */
-$acc_blue_4: #0f3c4b; /* Very dark blue (text) */
-$acc_blue_5: #006a91; /* Another darker blue */
+$app_blue_1: rgb(0, 94, 157); /* Primary blue */
+$app_blue_2: #0295cb; /* Darker blue */
+$app_blue_3: #01b9ee; /* Light blue */
+$app_blue_4: #0f3c4b; /* Very dark blue (text) */
+$app_blue_5: #006a91; /* Another darker blue */
 
 /* Yellow */
-$acc_yellow_1: #f6cd0d; /* Primary yellow */
+$app_yellow_1: #f6cd0d; /* Primary yellow */
 
 /* Red */
-$acc_red_1: #e64322;
+$app_red_1: #e64322;
 
 /* Sectors */
 $sector_yellow: #fbd703;
@@ -60,29 +62,29 @@ $sector_orange: #e27a25;
 
 /* temporary - used to determine which colours to use */
 .temp-c { height:53px; padding:10px; text-align:center; padding-top:40px; margin-bottom:1em; }
-.acc_body { background:$acc_body; color:#fff; }
-.acc_gray_1 { background:$acc_gray_1; }
-.acc_gray_2 { background:$acc_gray_2; }
-.acc_gray_3 { background:$acc_gray_3; }
-.acc_gray_4 { background:$acc_gray_4; }
-.acc_gray_5 { background:$acc_gray_5; }
-.acc_gray_6 { background:$acc_gray_6; color:#fff; }
-.acc_gray_7 { background:$acc_gray_7; color:#fff; }
-.acc_gray_8 { background:$acc_gray_8; color:#fff; }
-.acc_gray_9 { background:$acc_gray_9; color:#fff; }
-.acc_beige_1 { background:$acc_beige_1; }
-.acc_green_1 { background:$acc_green_1; color:#fff; }
-.acc_green_2 { background:$acc_green_2; color:#fff; }
-.acc_green_3 { background:$acc_green_3; color:#fff; }
-.acc_green_4 { background:$acc_green_4; color:#fff; }
-.acc_green_5 { background:$acc_green_5; }
-.acc_blue_1 { background:$acc_blue_1; color:#fff; }
-.acc_blue_2 { background:$acc_blue_2; color:#fff; }
-.acc_blue_3 { background:$acc_blue_3; color:#fff; }
-.acc_blue_4 { background:$acc_blue_4; color:#fff; }
-.acc_blue_5 { background:$acc_blue_5; color:#fff; }
-.acc_yellow_1 { background:$acc_yellow_1; }
-.acc_red_1 { background:$acc_red_1; color:#fff; }
+.app_body { background:$app_body; color:#fff; }
+.app_gray_1 { background:$app_gray_1; }
+.app_gray_2 { background:$app_gray_2; }
+.app_gray_3 { background:$app_gray_3; }
+.app_gray_4 { background:$app_gray_4; }
+.app_gray_5 { background:$app_gray_5; }
+.app_gray_6 { background:$app_gray_6; color:#fff; }
+.app_gray_7 { background:$app_gray_7; color:#fff; }
+.app_gray_8 { background:$app_gray_8; color:#fff; }
+.app_gray_9 { background:$app_gray_9; color:#fff; }
+.app_beige_1 { background:$app_beige_1; }
+.app_green_1 { background:$app_green_1; color:#fff; }
+.app_green_2 { background:$app_green_2; color:#fff; }
+.app_green_3 { background:$app_green_3; color:#fff; }
+.app_green_4 { background:$app_green_4; color:#fff; }
+.app_green_5 { background:$app_green_5; }
+.app_blue_1 { background:$app_blue_1; color:#fff; }
+.app_blue_2 { background:$app_blue_2; color:#fff; }
+.app_blue_3 { background:$app_blue_3; color:#fff; }
+.app_blue_4 { background:$app_blue_4; color:#fff; }
+.app_blue_5 { background:$app_blue_5; color:#fff; }
+.app_yellow_1 { background:$app_yellow_1; }
+.app_red_1 { background:$app_red_1; color:#fff; }
 .sector_yellow { background:$sector_yellow; }
 .sector_green { background:$sector_green; color:#fff; }
 .sector_blue { background:$sector_blue; color:#fff; }

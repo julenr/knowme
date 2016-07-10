@@ -1,9 +1,6 @@
 @import "../../styles/variables.scss";
 @import "../../styles/mixins.scss";
 
-$materialGreenColor_1: #009688;
-$mediumGrayColor_1: #AAA;
-
 .portfolio-flex-container {
   height: auto;
   display: flex;
@@ -20,11 +17,11 @@ $mediumGrayColor_1: #AAA;
       line-height: 1.4em;
       margin: 0;
       letter-spacing: 2px;
-      color: $mediumGrayColor_1;
+      color: $app_gray_4;
     }
     p {
       font-size: 1.6rem;
-      color:$materialGreenColor_1;
+      color: $material_green_1;
       font-weight:300;
     }
   }

@@ -28,8 +28,8 @@ class Contact extends React.Component {
   render () {
     const {telephone, github, mail, linkedin, telephonetxt} = this.props.Contact;
     return (
-      <section id="contact" className="section contact-section active">
-        <div className="contact-flex-container" >
+      <section className="section">
+        <div className="contact__flex-container" >
           <div className="section-header">
             <h1>Contact</h1>
             <p>Get in touch and let's start something great together</p>

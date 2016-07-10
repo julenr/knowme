@@ -6,33 +6,21 @@
 	General Styles
 =================================================================================*/
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,700,600,500,300);
-*{
+* {
   font-family: Roboto, sans-serif;
 }
-p{
+p {
   line-height:1.6em;
 }
-img{
+img {
   max-width:100%;
 }
-::-webkit-scrollbar{
-  background:#FFF;
-  box-shadow: 0 0 10px 0 rgba(0,0,0,.18);
-  width:11px;
-  height:11px;
-}
-::-webkit-scrollbar-thumb{
-  border:solid 3px #FFF;
-  background:#C0C0C0;
-}
-::-webkit-scrollbar-thumb:hover{
-  background:#009688;
-}
+
 .text-light{
   color:#727272;
 }
 
-.main-content{
+.main-content {
   position:fixed;
   z-index:55;
   top:65px;
@@ -42,7 +30,7 @@ img{
   background:#FFF;
   box-shadow: 0 0 60px 0 rgba(0,0,0,.18);
 }
-.section{
+.section {
   position:absolute;
   top:0;
   left:0;
@@ -52,20 +40,17 @@ img{
   overflow-y:auto;
   overflow-x:hidden;
   padding:60px 100px 0 100px;
-}
-
-span.show-menu .section.active,
-.section{
-  opacity:0;
-  visibility:hidden;
-  z-index:95;
-}
-.section.active{
   opacity:1;
   visibility:visible;
   z-index:100;
 }
-.section-header{
+
+span.show-menu .section {
+  opacity:0;
+  visibility:hidden;
+  z-index:95;
+}
+.section-header {
   position:relative;
   margin-bottom:60px;
 }
@@ -82,46 +67,10 @@ span.show-menu .section.active,
   margin-top:3px;
 }
 
-a.btn-material{
-  color:#FFF;
-}
-.btn-material{
-  position:relative;
-  padding:11px 27px;
-  border:solid 2px #009688;
-  background:#009688;
-  text-align:center;
-  display:inline-block;
-  *display:inline;
-  *zoom:1;
-  text-decoration:none !important;
-  color:#FFF;
-  text-transform:uppercase;
-  letter-spacing:2px;
-  font-weight:600;
-  transition:all .3s ease;
-}
-.btn-material:hover{
-  box-shadow: 0 10px 35px 0 rgba(0,0,0,.14);
-}
-.btn-material.btn-secondary{
-  background:#FFF;
-  color:#727272;
-  box-shadow: none;
-  border-color:transparent;
-}
-.btn-material.btn-secondary:hover{
-  border-color:#009688;
-  color:#009688;
-}
-
-
 /*=================================================================================
 	Responsive CSS
 =================================================================================*/
-@media(max-width:1024px){
-}
-@media(max-width:992px){
+@media(max-width:992px) {
   .section{
     padding:80px;
     padding-bottom:0;
@@ -180,8 +129,12 @@ a.btn-material{
   transform: translateY(-50%);
   width: 240px;
   text-align: center;
-  float: left;
   margin: 0 20px 20px 0;
+}
+@media(min-width:1200px) {
+  .svg-wrapper {
+    float: left;
+  }
 }
 
 .shape {
@@ -189,11 +142,11 @@ a.btn-material{
   //stroke-dasharray: 140 540;
   //stroke-dashoffset: -474;
   stroke-width: 8px;
-  stroke: #009688;
+  stroke: $material_green_1;
 }
 
 .text {
-  color: #727272;
+  color: $app_gray_6;
   font-family: 'Roboto';
   text-transform:uppercase;
   font-weight:600;
@@ -227,7 +180,6 @@ a.btn-material{
     stroke-dashoffset: 0;
     stroke-width: 2px;
   }
-
 }
 
 .svg-wrapper:hover .shape {
@@ -235,4 +187,19 @@ a.btn-material{
 }
 .svg-wrapper:not( :hover ) .shape {
   animation: 0.5s out linear forwards;
+}
+
+
+::-webkit-scrollbar{
+  background: white;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.18);
+  width: 11px;
+  height: 11px;
+}
+::-webkit-scrollbar-thumb {
+  border:solid 3px white;
+  background: $app_gray_3;
+}
+::-webkit-scrollbar-thumb:hover{
+  background: $material_green_1;
 }

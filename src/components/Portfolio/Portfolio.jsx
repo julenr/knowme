@@ -65,7 +65,7 @@ class PortfolioProjectItem extends React.Component {
          onMouseLeave={ () => this.snapPath.animate( { 'path' : this.pathConfig.from }, speed, easing ) }
       >
         <figure>
-          <img src={require(`../../assets/images/${images.root}-01-sm.${}png`)} />
+          <img src={require(`../../assets/images/${images.root}-01-sm.${(images.format)? images.format : 'png' }`)} />
           <svg viewBox="0 0 180 320" preserveAspectRatio="none">
             <path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z "/>
           </svg>

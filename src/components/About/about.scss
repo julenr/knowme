@@ -1,14 +1,16 @@
-@import "../../styles/variables.scss";
-@import "../../styles/mixins.scss";
+  @import "../../styles/variables.scss";
+  @import "../../styles/mixins.scss";
 
-.about__flex-container {
+.about {
+  &__flex-container {
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  }
 
-  .section-header {
+  &__section-header {
     flex: 1;
     max-width: 1000px;
     text-align: center;
@@ -29,9 +31,8 @@
 }
 
 @media (min-width: 600px) {
-  .about-flex-container {
-    .section-header {
-      font-size: 3rem;
+  .about {
+    &__section-header {
       p {
         font-size:1.4rem;
       }
