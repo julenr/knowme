@@ -54,7 +54,7 @@ const Background = () => {
 
 const MenuButton = (props) => {
   return (
-    <a href="#" className="menu-btn" onClick={() => props.menuButtonClick()}>
+    <a href="javascript: void 0" className="menu-btn" onClick={() => props.menuButtonClick()}>
       <span className="lines">
         <span className="l1" />
         <span className="l2" />
