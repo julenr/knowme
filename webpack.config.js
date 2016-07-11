@@ -106,7 +106,7 @@ if(TARGET === 'start' || !TARGET) {
       ]
     },
     postcss: function () {
-      return [precss, autoprefixer];
+      return [precss, autoprefixer({ browsers: ['last 4 versions'] })];
     },
     plugins: [
       new webpack.HotModuleReplacementPlugin(),
@@ -126,7 +126,6 @@ if(TARGET === 'start' || !TARGET) {
 
 if(TARGET === 'build') {
   module.exports = merge(common, {
-    devtool: '#source-map',
     entry: {
       app: PATHS.app,
       vendor: Object.keys(pkg.dependencies)
@@ -144,7 +143,7 @@ if(TARGET === 'build') {
       ]
     },
     postcss: function () {
-      return [precss, autoprefixer];
+      return [precss, autoprefixer({ browsers: ['last 4 versions'] })];
     },
     plugins: [
       new Clean([PATHS.build], {
@@ -200,21 +199,34 @@ if(TARGET === 'test' || TARGET === 'tdd') {
         }
       ],
       loaders: [
-        { test: /\.less$/, loader: ExtractTextPlugin.extract('style', 'css!less'), include: PATHS.app },
-        { test: /\.css$/, loader: ExtractTextPlugin.extract('style', 'css') }
+        {
+          test: /\.jsx?$/,
+          loader: 'babel',
+          query: {
+            presets: ['airbnb'],
+            plugins: ['transform-class-properties']
+          },
+          exclude: /(node_modules)/
+        },
+        { test: /\.json$/, loader: 'json' },
+        { test: /\.scss$/, loader: 'style!css!sass'}
       ]
     },
+    // This section is for Enzyme.js
+    externals: {
+      // 'jsdom': "window",
+      'cheerio': "window",
+      'react/addons': true,
+      // 'react/lib/ReactContext': 'window',
+      'react/lib/ExecutionEnvironment': true,
+      'react/lib/ReactContext': true
+    },
     plugins: [
-      new webpack.ProvidePlugin({
-        $: "jquery",
-        jQuery: "jquery",
-        "window.jQuery": "jquery"
-      }),
       new webpack.DefinePlugin({
-        '__DEV__': JSON.stringify(JSON.parse('true')),
-        '__BOOTSTRAP__': JSON.stringify(JSON.parse('true'))
+        // Note: this is false for tests so that a) we are testing the real behaviour, and b) there are no artificial delays in AJAX requests.
+        '__DEV__': JSON.stringify(JSON.parse('false'))
       }),
-      new ExtractTextPlugin('styles.[chunkhash].css')
+      new ForceCaseSensitivityPlugin()
     ]
-  })
+  });
 }
