@@ -5,142 +5,118 @@
 	Main Section
 =================================================================================*/
 .main-section{
-  // This is to see the avatr head outside the container
+  // This is to see the avatar head outside the container
   overflow:visible;
   padding:0;
 }
 
-.flex-container {
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: stretch;
+.home {
+  &__flex-container {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: stretch;
+  }
+  &__flex-avatar {
+    flex: 1;
+    &__avatar {
+      position: absolute;
+      bottom: 0;
+      width: 50%;
+      height: 105%;
+      background: url('../../assets/images/avatar.svg') no-repeat center/contain;
+    }
+  }
+  &__text-col-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    .intro-text {
+      padding: 10% 10% 10% 0%;
+      text-align: center;
+      > h1 {
+        font-weight: bold;
+        font-size: 2rem;
+        line-height: 1.4em;
+        margin: 0;
+        letter-spacing: 2px;
+        color: $app_gray_4;
+      }
+      > h2 {
+        font-size: .9rem;
+        color:$material_green_1;
+        font-weight:300;
+      }
+      > p {
+        font-size: 1.2rem;
+        color: $app_gray_3;
+        font-weight: 100;
+        font-style: italic;
+        margin-top: 35px;
+        line-height: 1.7em;
+      }
+    }
+  }
 }
 
-.flex-avatar {
-  flex: 1;
-}
-.avatar {
-  position: absolute;
-  bottom: 0;
-  width: 50%;
-  height: 105%;
-  background: url('../../assets/images/avatar.svg') no-repeat center/contain;
-}
-
-.text-col-main{
-  flex: 1;
-  overflow: auto;
-  //height:100%;
-}
-.intro-text-col{
-  position:relative;
-  height:100%;
-  width:100%;
-  display:table;
-  overflow-y:auto;
-}
-.intro-text-col > .inner{
-  height:100%;
-  width:100%;
-  vertical-align:middle;
-  display:table-cell;
-}
-.intro-text{
-  padding:60px 0 10px 0;
+.intro-btns {
   text-align: center;
-}
-.intro-text > h1 {
-  font-weight: bold;
-  font-size: 2rem;
-  line-height: 1.4em;
-  margin: 0;
-  letter-spacing: 2px;
-  color: #AAA;
-}
-.intro-text > h2 {
-  font-size:1em;
-  color:#009688;
-  font-weight:300;
-}
-.intro-text > p{
-  font-size:1.2rem;
-  color:#727272;
-  color:rgba(0,0,0,.45);
-  margin:0;
-  font-weight:100;
-  font-style: italic;
-  margin-top:35px;
-  line-height:1.7em;
-}
-.intro-btns{
-  margin-top:35px;
+  a {
+    text-decoration: none;
+  }
 }
 
 @media (min-width: 600px) {
-  .intro-text {
-    padding: 60px 160px 30px 30px;
-    > h1 {
-      font-size: 3rem;
-    }
-    > h2 {
-      font-size:1.5rem;
-    }
-    >P {
-      font-size:1.6rem;
+  .home {
+    &__text-col-main {
+      .intro-text {
+        > h1 {
+          font-size: 3rem;
+        }
+        > h2 {
+          font-size: 1.5rem;
+        }
+        > P {
+          font-size: 1.5rem;
+        }
+      }
     }
   }
 }
 
 @media(max-width:992px){
-  .flex-container {
-    display: inline;
-  }
-  .avatar {
-    margin: 0;
-    padding: 0;
-    position: static;
-    height: 100%;
-    width: 100%;
-  }
-  .flex-avatar {
-    margin: 0;
-    padding: 0;
-    display: inline;
-    width: 100%;
-    height: 100%;
-  }
-  .intro-text{
-    transform:none;
-  }
   .main-section{
     overflow-y:auto;
     overflow-x:hidden;
     padding-top: 80px;
   }
-  .intro-text > p{
-    margin-bottom:40px;
-  }
-  .intro-text-col{
-    display:block;
-    height:auto;
+  .home {
+    &__flex-container {
+      display: inline;
+    }
+    &__flex-avatar {
+      margin: 0;
+      padding: 0;
+      display: inline;
+      width: 100%;
+      height: 100%;
+      &__avatar {
+        margin: 0;
+        padding: 0;
+        position: static;
+        height: 100%;
+        width: 100%;
+      }
+    }
+    &__text-col-main {
+      .intro-text {
+        padding-left: 10%;
+      }
+    }
   }
 }
 
-@media(max-width:600px){
-  .main-section{
-    padding:50px;
-    padding-bottom:0;
-  }
-}
-
-@media(max-width:400px){
-  .main-section {
-    padding:35px 20px;
-    padding-bottom:0;
-  }
-  .main-section:after {
-    height:35px;
-  }
-}
