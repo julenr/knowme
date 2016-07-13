@@ -23,7 +23,7 @@ import './styles/ionicons/ionicons.scss';
 // REACT Dependencies
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, Link, IndexRoute, hashHistory } from 'react-router';
+import { Router, Route, Link, IndexRoute, browserHistory } from 'react-router';
 import Snap from 'imports-loader?this=>window,fix=>module.exports=0!snapsvg/dist/snap.svg.js';
 
 // REDUX STORE
@@ -45,13 +45,14 @@ document.body.appendChild(app);
 
 ReactDOM.render((
   <Provider store={ store }>
-    <Router history={ hashHistory }>
+    <Router history={ browserHistory }>
       <Route path="/" component={ App }>
         <IndexRoute component={ Home }/>
         <Route path="/about" component={ About } />
         <Route path="/resume" component={ Resume } />
         <Route path="/portfolio" component={ Portfolio } />
         <Route path="/contact" component={ Contact } />
+        <Route path="*" component={ Home }/>
       </Route>
     </Router>
   </Provider>
