@@ -1,93 +1,70 @@
-//
-//
-//              Created by
-//            __ _____ __    _____ _____    _____ _____    __ _____
-//         __|  |  |  |  |  |   __|   | |  | __  |     |__|  |     |
-//        |  |  |  |  |  |__|   __| | | |  |    -|  |  |  |  |  |  |
-//        |_____|_____|_____|_____|_|___|  |__|__|_____|_____|_____|
-//
-//                on 03/05/2016
-//                   isusk246@gmail.com
-//
-//
-/*
-	General purpose colors
 
-  COLOURS
+/*
+	ACC General purpose values
 */
 
+$font-size-base:          14px;
+$line-height-base:        1.428571429; // 20/14
 
-$material_green_1: #009688;
+$mobile-nav-height: 50px;
 
-/* Gray */
-$app_body: #474747;
-$app_gray_1: #f0eee7; /* Page background light gray (*) */
-$app_beige_1: #dbd9d0; /* Page background light beige */
-$app_gray_2: #a3a3a3; /* Mid gray */
-$app_gray_3: #bebebe; /* Lighter mid gray */
-$app_gray_4: #acaaa7; /* Another mid gray */
-$app_gray_5: #ebebeb; /* Lightest gray */
-$app_gray_6: #696969; /* Another darker mid gray */
-$app_gray_7: #8f8f8f; /* Another darker mid gray */
-$app_gray_8: #434240; /* Darker gray */
-$app_gray_9: #252525; /* ANother darker gray */
+$blue-grey: rgb(96, 125, 139);
 
-/* Green */
-$app_green_1: #2ba94f; /* Primary green */
-$app_green_2: #17983c; /* Darker green (text) */
-$app_green_3: #89c826; /* Bright green */
-$app_green_4: #304b0f; /* Dark green (text) */
-$app_green_5: #95d4a7; /* Pale light green */
+$box-shadow-1: 0 3px 1px -2px rgba(0,0,0,.14),0 2px 2px 0 rgba(0,0,0,.098),0 1px 5px 0 rgba(0,0,0,.084);
+$box-shadow-2: 0 2px 4px -1px rgba(0,0,0,.14),0 4px 5px 0 rgba(0,0,0,.098),0 1px 10px 0 rgba(0,0,0,.084);
+$box-shadow-3: 0 3px 5px -1px rgba(0,0,0,.2),0 6px 10px 0 rgba(0,0,0,.14),0 1px 18px 0 rgba(0,0,0,.12);
 
-/* Blue */
-$app_blue_1: rgb(0, 94, 157); /* Primary blue */
-$app_blue_2: #0295cb; /* Darker blue */
-$app_blue_3: #01b9ee; /* Light blue */
-$app_blue_4: #0f3c4b; /* Very dark blue (text) */
-$app_blue_5: #006a91; /* Another darker blue */
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
 
-/* Yellow */
-$app_yellow_1: #f6cd0d; /* Primary yellow */
+$font-family-base:        'museo';
 
-/* Red */
-$app_red_1: #e64322;
+$font-size-base:          14px;
+$font-size-large:         ceil(($font-size-base * 1.25)); // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85)); // ~12px
 
-/* Sectors */
-$sector_yellow: #fbd703;
-$sector_green: #62a444;
-$sector_blue: #00a5cb;
-$sector_purple: #5e5d9a;
-$sector_red: #c22126;
-$sector_orange: #e27a25;
+$font-size-h1:            floor(($font-size-base * 2.6)); // ~36px
+$font-size-h2:            floor(($font-size-base * 2.15)); // ~30px
+$font-size-h3:            ceil(($font-size-base * 1.7)); // ~24px
+$font-size-h4:            ceil(($font-size-base * 1.25)); // ~18px
+$font-size-h5:            $font-size-base;
+$font-size-h6:            ceil(($font-size-base * 0.85)); // ~12px
 
-/* temporary - used to determine which colours to use */
-.temp-c { height:53px; padding:10px; text-align:center; padding-top:40px; margin-bottom:1em; }
-.app_body { background:$app_body; color:#fff; }
-.app_gray_1 { background:$app_gray_1; }
-.app_gray_2 { background:$app_gray_2; }
-.app_gray_3 { background:$app_gray_3; }
-.app_gray_4 { background:$app_gray_4; }
-.app_gray_5 { background:$app_gray_5; }
-.app_gray_6 { background:$app_gray_6; color:#fff; }
-.app_gray_7 { background:$app_gray_7; color:#fff; }
-.app_gray_8 { background:$app_gray_8; color:#fff; }
-.app_gray_9 { background:$app_gray_9; color:#fff; }
-.app_beige_1 { background:$app_beige_1; }
-.app_green_1 { background:$app_green_1; color:#fff; }
-.app_green_2 { background:$app_green_2; color:#fff; }
-.app_green_3 { background:$app_green_3; color:#fff; }
-.app_green_4 { background:$app_green_4; color:#fff; }
-.app_green_5 { background:$app_green_5; }
-.app_blue_1 { background:$app_blue_1; color:#fff; }
-.app_blue_2 { background:$app_blue_2; color:#fff; }
-.app_blue_3 { background:$app_blue_3; color:#fff; }
-.app_blue_4 { background:$app_blue_4; color:#fff; }
-.app_blue_5 { background:$app_blue_5; color:#fff; }
-.app_yellow_1 { background:$app_yellow_1; }
-.app_red_1 { background:$app_red_1; color:#fff; }
-.sector_yellow { background:$sector_yellow; }
-.sector_green { background:$sector_green; color:#fff; }
-.sector_blue { background:$sector_blue; color:#fff; }
-.sector_purple { background:$sector_purple; color:#fff; }
-.sector_red { background:$sector_red; color:#fff; }
-.sector_orange { background:$sector_orange; color:#fff; }
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base:        1.428571429; // 20/14
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+$line-height-computed:    floor(($font-size-base * $line-height-base)); // ~20px
+
+//** By default, this inherits from the `<body>`.
+$headings-font-family:    inherit;
+$headings-font-weight:    500;
+$headings-line-height:    1.1;
+$headings-h4-h5-line-height: 1.4;
+$headings-color:          inherit;
+
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which the layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+$screen-xs-min: 480px;
+
+// Small screen / tablet or Phablet
+$screen-sm-min: 768px;
+
+// Medium screen / desktop and wide tablets
+$screen-md-min:                  992px;
+
+// Large screen / wide desktop
+$screen-lg-min:                  1200px;
+
+// Extra large screen / very wide desktop
+$screen-xl-min:                  1600px;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1);
+$screen-sm-max:              ($screen-md-min - 1);
+$screen-md-max:              ($screen-lg-min - 1);
+$screen-lg-max:              ($screen-xl-min - 1);
