@@ -16,6 +16,18 @@ const initialState = {
         }
       },
       {
+        title: 'Star Wars Universe',
+        description: '',
+        year: '2015',
+        techs: ['JavaScript', 'React', 'Redux', 'NodeJS', 'HTML', 'CSS'],
+        url: 'http://swu.julen.kiwi',
+        images: {
+          root: 'swu',
+          number: 1,
+          format: 'png'
+        }
+      },
+      {
         title: 'Gooptika',
         description: '',
         year: '2014',
@@ -107,6 +119,3 @@ export function _portfolio(state = initialState, action = {}) {
       return newState;
   }
 }
-
-
-
